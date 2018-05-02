@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKE-w2-Abx">
+                                <rect key="frame" x="0.0" y="64" width="414" height="936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-6o-jzU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-p8-x5m">
+                                                <rect key="frame" x="20" y="20" width="374" height="291.33333333333331"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-2b-7Sf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="97.333333333333329"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gPZ-wr-JvE" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="39.333333333333336"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7l-Lh-KIJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="117.33333333333333" height="39.333333333333336"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1V-Ku-1Pj" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="S1V-Ku-1Pj" secondAttribute="height" multiplier="1:1" id="zRp-pW-PSp"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="uOM-Pk-6LK" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="39.333333333333343" y="0.0" width="38.666666666666657" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="uOM-Pk-6LK" secondAttribute="height" multiplier="1:1" id="s0X-BG-xyx"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-ep-Cic" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="78" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="dBT-ep-Cic" secondAttribute="height" multiplier="1:1" id="qZ1-W0-niR"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsQ-V2-iPa">
+                                                                        <rect key="frame" x="127.33333333333334" y="0.0" width="118.33333333333334" height="39.333333333333336"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ko2-LZ-tA7" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Ko2-LZ-tA7" secondAttribute="height" multiplier="1:1" id="eyh-II-lCE"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="i3j-jc-3PP" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="39.333333333333314" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="i3j-jc-3PP" secondAttribute="height" multiplier="1:1" id="crC-V7-0b4"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zGu-LI-iJe" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="zGu-LI-iJe" secondAttribute="height" multiplier="1:1" id="iSF-ae-ndd"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAp-BD-qkE">
+                                                                        <rect key="frame" x="255.66666666666671" y="0.0" width="118.33333333333334" height="39.333333333333336"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="PxS-iZ-tfO" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="PxS-iZ-tfO" secondAttribute="height" multiplier="1:1" id="nX9-og-IbO"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3h4-Hl-sTS" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="39.333333333333314" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="3h4-Hl-sTS" secondAttribute="height" multiplier="1:1" id="I1v-ap-Knq"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-Ko-Uo4" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="FgD-Ko-Uo4" secondAttribute="height" multiplier="1:1" id="dpA-S8-iAI"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fy0-rR-Wx3" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="39.333333333333329" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-Ai-zQh">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="PLe-57-RPA" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="PLe-57-RPA" secondAttribute="height" multiplier="1:1" id="5bp-aR-Epy"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-qP-KAL" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="J7o-qP-KAL" secondAttribute="height" multiplier="1:1" id="pwZ-po-h2M"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0OV-Ix-Z4B" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="0OV-Ix-Z4B" secondAttribute="height" multiplier="1:1" id="6xV-yv-DJW"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2us-rl-7oh">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="EUp-Om-ZWX" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="EUp-Om-ZWX" secondAttribute="height" multiplier="1:1" id="4br-Yo-nzg"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="i75-p4-g9o" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="i75-p4-g9o" secondAttribute="height" multiplier="1:1" id="oje-QN-BiB"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="CIM-K8-yx9" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="CIM-K8-yx9" secondAttribute="height" multiplier="1:1" id="snL-5R-vRJ"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-7N-AKf">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="rlG-Qa-BMJ" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="rlG-Qa-BMJ" secondAttribute="height" multiplier="1:1" id="804-Nn-SN1"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NZk-4M-6AS" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="NZk-4M-6AS" secondAttribute="height" multiplier="1:1" id="Icx-Ce-Aep"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-kV-Feh" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="MuI-kV-Feh" secondAttribute="height" multiplier="1:1" id="Sh5-ee-0in"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-rr-E9J" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="68.333333333333343" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPe-Zn-9Dx">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-k4-xE5" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ePH-k4-xE5" secondAttribute="height" multiplier="1:1" id="ctZ-Jy-W76"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="tYo-P7-Axw" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="tYo-P7-Axw" secondAttribute="height" multiplier="1:1" id="9Ud-CE-4fM"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-2G-AEi" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ehi-2G-AEi" secondAttribute="height" multiplier="1:1" id="RxV-rX-okn"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri5-Em-lEr">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xy4-RP-I7H" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Xy4-RP-I7H" secondAttribute="height" multiplier="1:1" id="NY2-ZI-vAt"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="QPL-Zp-Wd3" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="QPL-Zp-Wd3" secondAttribute="height" multiplier="1:1" id="aIA-VO-Z8A"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-6l-lmR" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Uq6-6l-lmR" secondAttribute="height" multiplier="1:1" id="TMw-tn-uok"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-f0-8wc">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1fC-IY-25f" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="1fC-IY-25f" secondAttribute="height" multiplier="1:1" id="Brr-Zb-GkF"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-Kw-h6H" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="v1c-Kw-h6H" secondAttribute="height" multiplier="1:1" id="UW7-iU-eW1"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-qZ-1Jf" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="2iF-qZ-1Jf" secondAttribute="height" multiplier="1:1" id="Ik6-jk-myB"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-0m-1Ne">
+                                                        <rect key="frame" x="0.0" y="107.33333333333334" width="374" height="87"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YOf-Qm-NFx" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZE-LS-xi3">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ngy-kK-7dq" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ngy-kK-7dq" secondAttribute="height" multiplier="1:1" id="4Ji-hX-uUQ"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-5i-Vpw" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="fZL-5i-Vpw" secondAttribute="height" multiplier="1:1" id="q5o-20-xTM"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="x25-vc-pKN" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="x25-vc-pKN" secondAttribute="height" multiplier="1:1" id="Yo8-wX-p2n"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="049-xM-Zes">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NOT-te-KXY" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="NOT-te-KXY" secondAttribute="height" multiplier="1:1" id="jrn-7J-LEX"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-va-pJe" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="LfA-va-pJe" secondAttribute="height" multiplier="1:1" id="pVx-V3-s58"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="i7H-58-rdt" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="i7H-58-rdt" secondAttribute="height" multiplier="1:1" id="06z-XT-v3O"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Nn-Ks-Np3">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-uG-vNx" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="NDR-uG-vNx" secondAttribute="height" multiplier="1:1" id="Ws6-e2-eq2"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Fu-KQ-MFg" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="4Fu-KQ-MFg" secondAttribute="height" multiplier="1:1" id="TU4-dD-K0d"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="9S3-2b-Vqs" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="9S3-2b-Vqs" secondAttribute="height" multiplier="1:1" id="FAy-kL-EUV"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-D9-gEm" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="29" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-Cr-w7L">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-d4-b8g" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Qin-d4-b8g" secondAttribute="height" multiplier="1:1" id="ZlD-1w-1eK"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sub-4a-RN4" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Sub-4a-RN4" secondAttribute="height" multiplier="1:1" id="5Tt-em-c7b"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1gr-b6-iXj" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="1gr-b6-iXj" secondAttribute="height" multiplier="1:1" id="oDj-La-gfK"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h18-Pf-ldT">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="cH2-Aq-uPg" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="cH2-Aq-uPg" secondAttribute="height" multiplier="1:1" id="va6-d6-I6x"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xS8-bO-2Xy" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="xS8-bO-2Xy" secondAttribute="height" multiplier="1:1" id="MrY-QP-UvN"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="N3z-xB-aUX" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="N3z-xB-aUX" secondAttribute="height" multiplier="1:1" id="YFH-Zz-mM1"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4J3-au-qyA">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ypy-zr-jE0" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Ypy-zr-jE0" secondAttribute="height" multiplier="1:1" id="X4F-XB-nbJ"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="wvm-rw-CpW" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="wvm-rw-CpW" secondAttribute="height" multiplier="1:1" id="szg-Yc-zXw"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fel-NJ-k2j" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="fel-NJ-k2j" secondAttribute="height" multiplier="1:1" id="2R5-yu-2uc"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-ic-Trb" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="58" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tui-Wk-jAv">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="IuC-Pe-6eZ" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="IuC-Pe-6eZ" secondAttribute="height" multiplier="1:1" id="7jL-Iv-zrD"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="RSG-wM-xO9" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="RSG-wM-xO9" secondAttribute="height" multiplier="1:1" id="dyV-La-ht5"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="7pS-5c-aUg" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="7pS-5c-aUg" secondAttribute="height" multiplier="1:1" id="tt3-jj-YTb"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-kK-BvI">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xhy-oN-3kQ" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Xhy-oN-3kQ" secondAttribute="height" multiplier="1:1" id="suz-F4-NHp"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ean-5U-dP8" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Ean-5U-dP8" secondAttribute="height" multiplier="1:1" id="Lsr-mq-y6u"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HOZ-09-XJN" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="HOZ-09-XJN" secondAttribute="height" multiplier="1:1" id="qRz-sn-L7x"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-zJ-dgv">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1uS-ug-BIA" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="1uS-ug-BIA" secondAttribute="height" multiplier="1:1" id="bLQ-xI-6uq"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZtH-54-JKM" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ZtH-54-JKM" secondAttribute="height" multiplier="1:1" id="Dn7-o4-vuw"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ktf-2w-nFP" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="ktf-2w-nFP" secondAttribute="height" multiplier="1:1" id="cc3-w1-OJl"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xk6-3D-vDq">
+                                                        <rect key="frame" x="0.0" y="204.33333333333331" width="374" height="87"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-g0-iZm" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGo-KQ-GkK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-lI-0LL" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="SFa-lI-0LL" secondAttribute="height" multiplier="1:1" id="GtD-70-VNQ"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0yL-nh-f2q" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="0yL-nh-f2q" secondAttribute="height" multiplier="1:1" id="pFI-X3-JAp"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-dG-vVm" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="iUZ-dG-vVm" secondAttribute="height" multiplier="1:1" id="AHa-Mi-VIX"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-3u-Cjp">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bu6-GN-Isg" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="bu6-GN-Isg" secondAttribute="height" multiplier="1:1" id="8z5-5w-H2k"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-Wy-ZTX" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="fZd-Wy-ZTX" secondAttribute="height" multiplier="1:1" id="ejD-2o-G0I"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VaI-ca-It2" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="VaI-ca-It2" secondAttribute="height" multiplier="1:1" id="pu0-ZB-YhI"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahN-KM-E4Y">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xgh-AX-dV3" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Xgh-AX-dV3" secondAttribute="height" multiplier="1:1" id="hY9-2n-HOl"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-bO-kR8" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="YHg-bO-kR8" secondAttribute="height" multiplier="1:1" id="aJh-Cu-EjU"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Y1-Oj-25F" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="9Y1-Oj-25F" secondAttribute="height" multiplier="1:1" id="lFg-Cc-zXH"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3cL-D6-xD7" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="29" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybn-TW-eFh">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-x8-ZOI" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="4zh-x8-ZOI" secondAttribute="height" multiplier="1:1" id="h5N-Jf-HP2"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-T5-sGF" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Jgz-T5-sGF" secondAttribute="height" multiplier="1:1" id="dFF-9z-PNN"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-sV-cAM" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="qpf-sV-cAM" secondAttribute="height" multiplier="1:1" id="OK1-e6-rzZ"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE6-td-XEZ">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3xQ-pm-ouw" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="3xQ-pm-ouw" secondAttribute="height" multiplier="1:1" id="uM3-2F-wD9"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-3F-lca" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="MfN-3F-lca" secondAttribute="height" multiplier="1:1" id="Mqs-AC-02Y"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="8iu-m8-vQD" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="8iu-m8-vQD" secondAttribute="height" multiplier="1:1" id="LWK-13-iFz"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-tv-4Dx">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0AK-Df-O2I" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="0AK-Df-O2I" secondAttribute="height" multiplier="1:1" id="6yM-db-3Qx"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-dO-8aA" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="f2E-dO-8aA" secondAttribute="height" multiplier="1:1" id="L2n-De-nxh"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Afp-pb-wx7" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Afp-pb-wx7" secondAttribute="height" multiplier="1:1" id="DPD-Ud-ipt"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dh7-ey-QQ0" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="58" width="374" height="29"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoL-Yp-OTV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ltu-FR-Jdq" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="Ltu-FR-Jdq" secondAttribute="height" multiplier="1:1" id="pir-YH-Mzd"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-Az-EHR" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="kQ6-Az-EHR" secondAttribute="height" multiplier="1:1" id="VfW-ww-bf9"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="glj-Bn-PE4" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="glj-Bn-PE4" secondAttribute="height" multiplier="1:1" id="KrB-XC-0Vp"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THC-56-mYK">
+                                                                        <rect key="frame" x="143.66666666666666" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="eqD-IL-shM" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="eqD-IL-shM" secondAttribute="height" multiplier="1:1" id="IJG-Ai-l6U"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="x4l-9u-ttu" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="x4l-9u-ttu" secondAttribute="height" multiplier="1:1" id="gLq-JC-mjO"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="JSO-tX-fD5" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="JSO-tX-fD5" secondAttribute="height" multiplier="1:1" id="RNG-as-xSq"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm0-8L-ugZ">
+                                                                        <rect key="frame" x="287" y="0.0" width="87" height="29"/>
+                                                                        <subviews>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="sUl-Kf-vrk" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="sUl-Kf-vrk" secondAttribute="height" multiplier="1:1" id="9aO-qd-8RM"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="RI7-AY-Ofd" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="29" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="RI7-AY-Ofd" secondAttribute="height" multiplier="1:1" id="NNA-nc-spe"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FZw-Tt-BWw" customClass="SudoKoCellView" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                                                <rect key="frame" x="58" y="0.0" width="29" height="29"/>
+                                                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="FZw-Tt-BWw" secondAttribute="height" multiplier="1:1" id="D3m-uz-VUt"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-z0-iEV">
+                                                <rect key="frame" x="50" y="371.33333333333331" width="314" height="104.66666666666669"/>
+                                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="3:1" id="0yH-Nh-dV8"/>
+                                                    <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="120:40" id="1Gw-2T-xyg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ft-Wv-mG6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="top" secondItem="S2V-p8-x5m" secondAttribute="bottom" constant="60" id="CsH-Ix-m2T"/>
+                                            <constraint firstItem="S2V-p8-x5m" firstAttribute="top" secondItem="0uy-6o-jzU" secondAttribute="top" constant="20" id="Gqm-u4-qFn"/>
+                                            <constraint firstAttribute="trailing" secondItem="4ZN-z0-iEV" secondAttribute="trailing" constant="50" id="IyT-eu-t8A"/>
+                                            <constraint firstAttribute="height" constant="1000" id="Xch-Ua-aAY"/>
+                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="top" secondItem="S2V-p8-x5m" secondAttribute="bottom" constant="60" id="Zna-CY-6Qx"/>
+                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="50" id="d3O-yY-VEd"/>
+                                            <constraint firstItem="S2V-p8-x5m" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="20" id="gjL-pa-rOJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="S2V-p8-x5m" secondAttribute="trailing" constant="20" id="uAm-kx-aXE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0uy-6o-jzU" firstAttribute="top" secondItem="PKE-w2-Abx" secondAttribute="top" id="5hN-0k-Aqr"/>
+                                    <constraint firstAttribute="bottom" secondItem="0uy-6o-jzU" secondAttribute="bottom" id="Sc5-nc-j3o"/>
+                                    <constraint firstItem="0uy-6o-jzU" firstAttribute="leading" secondItem="PKE-w2-Abx" secondAttribute="leading" id="VQs-Ld-Ffe"/>
+                                    <constraint firstAttribute="trailing" secondItem="0uy-6o-jzU" secondAttribute="trailing" id="qpU-Q7-Pdm"/>
+                                </constraints>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-tV-ccC">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Solve My Sudoku" id="uLG-AM-RpL"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PKE-w2-Abx" secondAttribute="bottom" id="5Ky-8s-aLj"/>
+                            <constraint firstItem="0uy-6o-jzU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Cuc-N6-Mup"/>
+                            <constraint firstItem="fmq-tV-ccC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MJa-V8-FPi"/>
+                            <constraint firstItem="PKE-w2-Abx" firstAttribute="top" secondItem="fmq-tV-ccC" secondAttribute="bottom" id="MSg-YG-0aX"/>
+                            <constraint firstItem="fmq-tV-ccC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QCS-NP-Jlk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PKE-w2-Abx" secondAttribute="trailing" id="i3Z-gB-uCI"/>
+                            <constraint firstItem="PKE-w2-Abx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kS5-Se-YhH"/>
+                            <constraint firstItem="fmq-tV-ccC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ybD-Jz-vNb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="a0" destination="S1V-Ku-1Pj" id="TTH-4f-byd"/>
+                        <outlet property="a1" destination="uOM-Pk-6LK" id="tjg-eo-YGv"/>
+                        <outlet property="a2" destination="dBT-ep-Cic" id="ypf-Z8-rD7"/>
+                        <outlet property="a3" destination="Ko2-LZ-tA7" id="1ip-kz-oqM"/>
+                        <outlet property="a4" destination="i3j-jc-3PP" id="fiG-1D-VfS"/>
+                        <outlet property="a5" destination="zGu-LI-iJe" id="JHq-Lc-DfX"/>
+                        <outlet property="a6" destination="PxS-iZ-tfO" id="zmc-UH-Ob1"/>
+                        <outlet property="a7" destination="3h4-Hl-sTS" id="ocT-Ih-Yoz"/>
+                        <outlet property="a8" destination="FgD-Ko-Uo4" id="pRE-XM-NQf"/>
+                        <outlet property="b0" destination="PLe-57-RPA" id="iue-WV-TX0"/>
+                        <outlet property="b1" destination="J7o-qP-KAL" id="uPC-2v-p6R"/>
+                        <outlet property="b2" destination="0OV-Ix-Z4B" id="XYn-PZ-eSL"/>
+                        <outlet property="b3" destination="EUp-Om-ZWX" id="eZ3-aO-yoV"/>
+                        <outlet property="b4" destination="i75-p4-g9o" id="Vgc-3N-jxw"/>
+                        <outlet property="b5" destination="CIM-K8-yx9" id="n5i-If-uDk"/>
+                        <outlet property="b6" destination="rlG-Qa-BMJ" id="BdK-d2-sa8"/>
+                        <outlet property="b7" destination="NZk-4M-6AS" id="W65-8o-Elv"/>
+                        <outlet property="b8" destination="MuI-kV-Feh" id="jHE-Nt-lcp"/>
+                        <outlet property="c0" destination="ePH-k4-xE5" id="4S5-qo-Pbj"/>
+                        <outlet property="c1" destination="tYo-P7-Axw" id="mi2-u7-Pck"/>
+                        <outlet property="c2" destination="ehi-2G-AEi" id="QWM-jm-b3U"/>
+                        <outlet property="c3" destination="Xy4-RP-I7H" id="5T4-9F-bFT"/>
+                        <outlet property="c4" destination="QPL-Zp-Wd3" id="rtT-iy-pAl"/>
+                        <outlet property="c5" destination="Uq6-6l-lmR" id="Qw0-L4-0n2"/>
+                        <outlet property="c6" destination="1fC-IY-25f" id="OqC-Vh-67l"/>
+                        <outlet property="c7" destination="v1c-Kw-h6H" id="4Zg-Sh-fYV"/>
+                        <outlet property="c8" destination="2iF-qZ-1Jf" id="wRy-QM-a51"/>
+                        <outlet property="d0" destination="ngy-kK-7dq" id="c90-dA-GlH"/>
+                        <outlet property="d1" destination="fZL-5i-Vpw" id="5ma-ke-gQX"/>
+                        <outlet property="d2" destination="x25-vc-pKN" id="OdW-DJ-ZYb"/>
+                        <outlet property="d3" destination="NOT-te-KXY" id="iPD-b0-lhT"/>
+                        <outlet property="d4" destination="LfA-va-pJe" id="dxb-t9-25S"/>
+                        <outlet property="d5" destination="i7H-58-rdt" id="cZG-Fg-nXE"/>
+                        <outlet property="d6" destination="NDR-uG-vNx" id="fyT-A0-NIa"/>
+                        <outlet property="d7" destination="4Fu-KQ-MFg" id="CWt-50-ZO1"/>
+                        <outlet property="d8" destination="9S3-2b-Vqs" id="fF3-Am-HWX"/>
+                        <outlet property="e0" destination="Qin-d4-b8g" id="g7n-UM-nvj"/>
+                        <outlet property="e1" destination="Sub-4a-RN4" id="jiu-Aq-4K9"/>
+                        <outlet property="e2" destination="1gr-b6-iXj" id="a0L-n6-Mi6"/>
+                        <outlet property="e3" destination="cH2-Aq-uPg" id="pte-v3-ikh"/>
+                        <outlet property="e4" destination="xS8-bO-2Xy" id="JzB-rQ-uBA"/>
+                        <outlet property="e5" destination="N3z-xB-aUX" id="p7q-8u-N9T"/>
+                        <outlet property="e6" destination="Ypy-zr-jE0" id="w76-kv-jxH"/>
+                        <outlet property="e7" destination="wvm-rw-CpW" id="FTG-JM-9Er"/>
+                        <outlet property="e8" destination="fel-NJ-k2j" id="crS-W6-gpR"/>
+                        <outlet property="f0" destination="IuC-Pe-6eZ" id="e7G-25-kHo"/>
+                        <outlet property="f1" destination="RSG-wM-xO9" id="3Kf-3C-PYq"/>
+                        <outlet property="f2" destination="7pS-5c-aUg" id="JPM-uX-b3v"/>
+                        <outlet property="f3" destination="Xhy-oN-3kQ" id="yHQ-KW-uwu"/>
+                        <outlet property="f4" destination="Ean-5U-dP8" id="Ome-p0-FXe"/>
+                        <outlet property="f5" destination="HOZ-09-XJN" id="GDH-TT-DF2"/>
+                        <outlet property="f6" destination="1uS-ug-BIA" id="iAX-OB-IhX"/>
+                        <outlet property="f7" destination="ZtH-54-JKM" id="mgs-FZ-Wrq"/>
+                        <outlet property="f8" destination="ktf-2w-nFP" id="MAN-La-cWk"/>
+                        <outlet property="g0" destination="SFa-lI-0LL" id="JlZ-Aq-Hxb"/>
+                        <outlet property="g1" destination="0yL-nh-f2q" id="ode-do-xhO"/>
+                        <outlet property="g2" destination="iUZ-dG-vVm" id="EMI-ek-pbp"/>
+                        <outlet property="g3" destination="bu6-GN-Isg" id="t5P-HS-P73"/>
+                        <outlet property="g4" destination="fZd-Wy-ZTX" id="XnY-Td-TFg"/>
+                        <outlet property="g5" destination="VaI-ca-It2" id="Psi-GQ-lKu"/>
+                        <outlet property="g6" destination="Xgh-AX-dV3" id="TQC-R0-Jc6"/>
+                        <outlet property="g7" destination="YHg-bO-kR8" id="XoU-ap-9JP"/>
+                        <outlet property="g8" destination="9Y1-Oj-25F" id="sLC-pZ-uGs"/>
+                        <outlet property="h0" destination="4zh-x8-ZOI" id="Ag6-eL-cGb"/>
+                        <outlet property="h1" destination="Jgz-T5-sGF" id="dA5-rN-zw4"/>
+                        <outlet property="h2" destination="qpf-sV-cAM" id="s98-ZV-CYi"/>
+                        <outlet property="h3" destination="3xQ-pm-ouw" id="K4B-z6-x0K"/>
+                        <outlet property="h4" destination="MfN-3F-lca" id="c7b-Dh-1hp"/>
+                        <outlet property="h5" destination="8iu-m8-vQD" id="WDW-P5-ZZJ"/>
+                        <outlet property="h6" destination="0AK-Df-O2I" id="3XW-HI-wLP"/>
+                        <outlet property="h7" destination="f2E-dO-8aA" id="qaS-PX-G49"/>
+                        <outlet property="h8" destination="Afp-pb-wx7" id="1p1-KI-Kpz"/>
+                        <outlet property="i0" destination="Ltu-FR-Jdq" id="gxU-Uu-Kf6"/>
+                        <outlet property="i1" destination="kQ6-Az-EHR" id="Mwl-6U-L84"/>
+                        <outlet property="i2" destination="glj-Bn-PE4" id="14q-Zp-jhY"/>
+                        <outlet property="i3" destination="eqD-IL-shM" id="hFy-g6-mKb"/>
+                        <outlet property="i4" destination="x4l-9u-ttu" id="diH-uF-iXK"/>
+                        <outlet property="i5" destination="JSO-tX-fD5" id="faC-K2-Nhm"/>
+                        <outlet property="i6" destination="sUl-Kf-vrk" id="q4F-Xe-QT9"/>
+                        <outlet property="i7" destination="RI7-AY-Ofd" id="Ndt-0T-vFp"/>
+                        <outlet property="i8" destination="FZw-Tt-BWw" id="fyj-AX-KbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="131.25"/>
+        </scene>
+    </scenes>
+</document>
