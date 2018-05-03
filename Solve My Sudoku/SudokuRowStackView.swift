@@ -16,6 +16,6 @@ class SudokuRowStackView: UIStackView {
         self.axis = UILayoutConstraintAxis.horizontal
         self.alignment = UIStackViewAlignment.fill
         self.distribution = UIStackViewDistribution.fill
-        self.spacing = 10.0
+        self.spacing = 2.0
     }
 }

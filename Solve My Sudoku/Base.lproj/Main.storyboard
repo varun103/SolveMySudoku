@@ -26,8 +26,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-6o-jzU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-p8-x5m">
-                                                <rect key="frame" x="20" y="20" width="374" height="291.33333333333331"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-p8-x5m">
+                                                <rect key="frame" x="20" y="20" width="374" height="275.33333333333331"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-2b-7Sf">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="97.333333333333329"/>
@@ -365,7 +365,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-0m-1Ne">
-                                                        <rect key="frame" x="0.0" y="107.33333333333334" width="374" height="87"/>
+                                                        <rect key="frame" x="0.0" y="99.333333333333343" width="374" height="87"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YOf-Qm-NFx" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
@@ -700,7 +700,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xk6-3D-vDq">
-                                                        <rect key="frame" x="0.0" y="204.33333333333331" width="374" height="87"/>
+                                                        <rect key="frame" x="0.0" y="188.33333333333331" width="374" height="87"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-g0-iZm" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
@@ -1037,11 +1037,10 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-z0-iEV">
-                                                <rect key="frame" x="50" y="371.33333333333331" width="314" height="104.66666666666669"/>
+                                                <rect key="frame" x="50" y="355.33333333333331" width="314" height="104.66666666666669"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="3:1" id="0yH-Nh-dV8"/>
-                                                    <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="120:40" id="1Gw-2T-xyg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Button">
@@ -1058,7 +1057,6 @@
                                             <constraint firstItem="S2V-p8-x5m" firstAttribute="top" secondItem="0uy-6o-jzU" secondAttribute="top" constant="20" id="Gqm-u4-qFn"/>
                                             <constraint firstAttribute="trailing" secondItem="4ZN-z0-iEV" secondAttribute="trailing" constant="50" id="IyT-eu-t8A"/>
                                             <constraint firstAttribute="height" constant="1000" id="Xch-Ua-aAY"/>
-                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="top" secondItem="S2V-p8-x5m" secondAttribute="bottom" constant="60" id="Zna-CY-6Qx"/>
                                             <constraint firstItem="4ZN-z0-iEV" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="50" id="d3O-yY-VEd"/>
                                             <constraint firstItem="S2V-p8-x5m" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="20" id="gjL-pa-rOJ"/>
                                             <constraint firstAttribute="trailing" secondItem="S2V-p8-x5m" secondAttribute="trailing" constant="20" id="uAm-kx-aXE"/>
@@ -1143,6 +1141,7 @@
                         <outlet property="e6" destination="Ypy-zr-jE0" id="w76-kv-jxH"/>
                         <outlet property="e7" destination="wvm-rw-CpW" id="FTG-JM-9Er"/>
                         <outlet property="e8" destination="fel-NJ-k2j" id="crS-W6-gpR"/>
+                        <outlet property="embeddedView" destination="0uy-6o-jzU" id="qml-OZ-bvY"/>
                         <outlet property="f0" destination="IuC-Pe-6eZ" id="e7G-25-kHo"/>
                         <outlet property="f1" destination="RSG-wM-xO9" id="3Kf-3C-PYq"/>
                         <outlet property="f2" destination="7pS-5c-aUg" id="JPM-uX-b3v"/>
@@ -1179,6 +1178,7 @@
                         <outlet property="i6" destination="sUl-Kf-vrk" id="q4F-Xe-QT9"/>
                         <outlet property="i7" destination="RI7-AY-Ofd" id="Ndt-0T-vFp"/>
                         <outlet property="i8" destination="FZw-Tt-BWw" id="fyj-AX-KbG"/>
+                        <outlet property="stack" destination="S2V-p8-x5m" id="mdU-aM-EsW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

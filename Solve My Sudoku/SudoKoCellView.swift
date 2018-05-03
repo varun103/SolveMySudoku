@@ -16,7 +16,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
         self.adjustsFontSizeToFitWidth = true
         self.delegate = self
         self.keyboardType = UIKeyboardType.numberPad
-        self.background = UIImage(named: "Rectangle3")!
+        self.background = UIImage(named: "Rectangle_light")!
         self.placeholder = ""
         let widthConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 80)
         let heightConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 80)

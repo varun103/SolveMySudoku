@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var stack: UIStackView!
+    @IBOutlet weak var embeddedView: UIView!
+    let shapeLayer = CAShapeLayer()
+    
     @IBOutlet weak var a0: SudoKoCellView!
     @IBOutlet weak var a1: SudoKoCellView!
     @IBOutlet weak var a2: SudoKoCellView!
@@ -148,6 +152,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.stack.layer.addSublayer(shapeLayer)
+        
         self.sudokuBoard = [[a0,a1,a2,a3,a4,a5,a6,a7,a8],
                             [b0,b1,b2,b3,b4,b5,b6,b7,b8],
                             [c0,c1,c2,c3,c4,c5,c6,c7,c8],
@@ -161,6 +167,38 @@ class ViewController: UIViewController {
     }
     
     func doneEditing() {
+        
+    }
+    
+    /// Had to add the bezier path code here since
+    /// it needs to resize for different screen sizes.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let squarePath = UIBezierPath(rect: self.stack.bounds)
+        let width = self.stack.bounds.width
+        let height = self.stack.bounds.height
+        
+        let firstVerticalCoord = width/3
+        squarePath.move(to: CGPoint(x:firstVerticalCoord, y:0))
+        squarePath.addLine(to: CGPoint(x:firstVerticalCoord, y:height))
+        
+        let secondVerticalCoord = (width * 2)/3
+        squarePath.move(to: CGPoint(x:secondVerticalCoord, y:0))
+        squarePath.addLine(to: CGPoint(x:secondVerticalCoord, y:height))
+        
+        let firstHorizontal = height/3
+        squarePath.move(to: CGPoint(x:0, y:firstHorizontal))
+        squarePath.addLine(to: CGPoint(x:width, y:firstHorizontal))
+        
+        let secondHorizontal = (height * 2)/3
+        squarePath.move(to: CGPoint(x:0, y:secondHorizontal))
+        squarePath.addLine(to: CGPoint(x:width, y:secondHorizontal))
+        
+        shapeLayer.path = squarePath.cgPath
+        shapeLayer.strokeColor = UIColor.gray.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 2.0
+        self.shapeLayer.frame = self.stack.bounds
         
     }
     
