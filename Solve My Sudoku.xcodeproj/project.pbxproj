@@ -16,6 +16,7 @@
 		558B65E12060B213008DA38E /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65E02060B213008DA38E /* SolverTests.swift */; };
 		558B65EC2060B213008DA38E /* Solve_My_SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65EB2060B213008DA38E /* Solve_My_SudokuUITests.swift */; };
 		558B65FC206349C3008DA38E /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65FB206349C3008DA38E /* Solver.swift */; };
+		559C431F209AFE2600D637F3 /* SolverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C431E209AFE2600D637F3 /* SolverService.swift */; };
 		55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A12094F88600EA543A /* SudoKoCellView.swift */; };
 		55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A320966E3F00EA543A /* SudokuRowStackView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		558B65EB2060B213008DA38E /* Solve_My_SudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solve_My_SudokuUITests.swift; sourceTree = "<group>"; };
 		558B65ED2060B213008DA38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558B65FB206349C3008DA38E /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
+		559C431E209AFE2600D637F3 /* SolverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolverService.swift; sourceTree = "<group>"; };
 		55A360A12094F88600EA543A /* SudoKoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoKoCellView.swift; sourceTree = "<group>"; };
 		55A360A320966E3F00EA543A /* SudokuRowStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuRowStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				558B65CF2060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld */,
 				558B65FB206349C3008DA38E /* Solver.swift */,
 				55A360A320966E3F00EA543A /* SudokuRowStackView.swift */,
+				559C431E209AFE2600D637F3 /* SolverService.swift */,
 			);
 			path = "Solve My Sudoku";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				558B65C92060B213008DA38E /* AppDelegate.swift in Sources */,
 				55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */,
 				55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */,
+				559C431F209AFE2600D637F3 /* SolverService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

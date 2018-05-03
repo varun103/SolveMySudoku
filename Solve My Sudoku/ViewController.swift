@@ -163,7 +163,6 @@ class ViewController: UIViewController {
                             [g0,g1,g2,g3,g4,g5,g6,g7,g8],
                             [h0,h1,h2,h3,h4,h5,h6,h7,h8],
                             [i0,i1,i2,i3,i4,i5,i6,i7,i8]]
-        
     }
     
     func doneEditing() {
@@ -199,7 +198,6 @@ class ViewController: UIViewController {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = 2.0
         self.shapeLayer.frame = self.stack.bounds
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
