@@ -10,18 +10,19 @@ import UIKit
 
 class SudoKoCellView: UITextField, UITextFieldDelegate {
     
+    let backgroundImage = "Rectangle"
+    let backgroundImageGrey = "Rectangle_grey"
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.clearsOnInsertion = true
         self.adjustsFontSizeToFitWidth = true
         self.delegate = self
         self.keyboardType = UIKeyboardType.numberPad
-        self.background = UIImage(named: "Rectangle_light")!
-        self.placeholder = ""
         let widthConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 80)
         let heightConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 80)
         self.addConstraints([widthConstraint, heightConstraint])
-    
+        
         let toolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30))
         toolBar.barStyle = .default
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -29,6 +30,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
         toolBar.setItems([flexSpace,doneButton], animated: true)
         
         self.inputAccessoryView = toolBar
+        self.reset()
     }
     
     /// If this cell has any input text
@@ -38,20 +40,37 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     
     /// Input text is in string format. This returns that String as an Integer - if Empty returns 0
     var integerValue: Int {
-        if let text = self.text {
-            if self.hasTextInput {
-                return Int(text)!
-            }
+        set(value) {
+            self.text = String(value)
         }
-        return 0
+        
+        get{
+            if let text = self.text {
+                if self.hasTextInput {
+                    return Int(text)!
+                }
+            }
+            return 0
+        }
     }
     
-    /// Greys out the cell if true else switches is back to original
-    func greyOut(_ input:Bool){
-        if input {
-            self.background = UIImage(named: "Rectangle_grey")!
+    func reset() {
+        self.placeholder = ""
+        self.text = ""
+        self.background = UIImage(named: self.backgroundImage)!
+        self.font = UIFont(name: "AvenirNext-Bold", size: 21)
+        self.textColor = UIColor(red: 49/255, green: 54/255, blue: 50/255, alpha: 100)
+
+    }
+    
+    /// Configures the cell if true else switches is back to original
+    func setAsEmptyCell(_ value:Bool){
+        if value {
+            self.background = UIImage(named: self.backgroundImage)!
+            self.font = UIFont(name: "AvenirNext-Regular", size: 25)
+            self.textColor = UIColor(red: 49/255, green: 54/255, blue: 50/255, alpha: 80/100)
         } else {
-            self.background = UIImage(named: "Rectangle3")!
+            self.background = UIImage(named: self.backgroundImageGrey)!
         }
     }
     

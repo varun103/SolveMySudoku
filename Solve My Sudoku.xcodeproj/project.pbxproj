@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550E011420A2D7E100ECD22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550E011320A2D7E000ECD22E /* Assets.xcassets */; };
 		558B65C92060B213008DA38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65C82060B213008DA38E /* AppDelegate.swift */; };
 		558B65CB2060B213008DA38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65CA2060B213008DA38E /* ViewController.swift */; };
 		558B65CE2060B213008DA38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558B65CC2060B213008DA38E /* Main.storyboard */; };
 		558B65D12060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 558B65CF2060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld */; };
-		558B65D32060B213008DA38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558B65D22060B213008DA38E /* Assets.xcassets */; };
 		558B65D62060B213008DA38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558B65D42060B213008DA38E /* LaunchScreen.storyboard */; };
 		558B65E12060B213008DA38E /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65E02060B213008DA38E /* SolverTests.swift */; };
 		558B65EC2060B213008DA38E /* Solve_My_SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65EB2060B213008DA38E /* Solve_My_SudokuUITests.swift */; };
@@ -39,12 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550E011320A2D7E000ECD22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558B65C52060B213008DA38E /* Solve My Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solve My Sudoku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558B65C82060B213008DA38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558B65CA2060B213008DA38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		558B65CD2060B213008DA38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		558B65D02060B213008DA38E /* Solve_My_Sudoku.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Solve_My_Sudoku.xcdatamodel; sourceTree = "<group>"; };
-		558B65D22060B213008DA38E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558B65D52060B213008DA38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		558B65D72060B213008DA38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558B65DC2060B213008DA38E /* Solve My SudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Solve My SudokuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,11 +107,11 @@
 		558B65C72060B213008DA38E /* Solve My Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				550E011320A2D7E000ECD22E /* Assets.xcassets */,
 				55A360A12094F88600EA543A /* SudoKoCellView.swift */,
 				558B65C82060B213008DA38E /* AppDelegate.swift */,
 				558B65CA2060B213008DA38E /* ViewController.swift */,
 				558B65CC2060B213008DA38E /* Main.storyboard */,
-				558B65D22060B213008DA38E /* Assets.xcassets */,
 				558B65D42060B213008DA38E /* LaunchScreen.storyboard */,
 				558B65D72060B213008DA38E /* Info.plist */,
 				558B65CF2060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld */,
@@ -248,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558B65D62060B213008DA38E /* LaunchScreen.storyboard in Resources */,
-				558B65D32060B213008DA38E /* Assets.xcassets in Resources */,
+				550E011420A2D7E100ECD22E /* Assets.xcassets in Resources */,
 				558B65CE2060B213008DA38E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

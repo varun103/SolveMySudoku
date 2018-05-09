@@ -12,15 +12,6 @@ import XCTest
 class SolverTest: XCTestCase {
     
     override func setUp() {
-        let board:[[Int]] = [[1, 9, 3, 2, 4, 8, 6, 5, 7],
-                             [7, 8, 4, 3, 5, 6, 1, 9, 2],
-                             [5, 2, 6, 1, 7, 9, 8, 3, 4],
-                             [8, 1, 7, 9, 3, 5, 2, 4, 6],
-                             [3, 6, 9, 4, 1, 2, 5, 7, 8],
-                             [2, 4, 5, 6, 8, 7, 3, 1, 9],
-                             [9, 7, 1, 8, 6, 3, 4, 2, 5],
-                             [4, 5, 8, 7, 2, 1, 9, 6, 3],
-                             [6, 3, 2, 5, 9, 4, 7, 8, 1]]
         super.setUp()
     }
     
@@ -38,7 +29,7 @@ class SolverTest: XCTestCase {
                               [9, 7, 1, 8, 6, 3, 4, 2, 5],
                               [4, 5, 8, 7, 2, 1, 9, 6, 3],
                               [6, 3, 2, 5, 9, 4, 7, 8, 1]]
-        let s:Solver = Solver(board: board)
+        let s:Solver = Solver()
         XCTAssertEqual(board[0], s.getRow(board: board, xPos: 0))
         
     }
@@ -53,7 +44,7 @@ class SolverTest: XCTestCase {
                               [9, 7, 1, 8, 6, 3, 4, 2, 5],
                               [4, 5, 8, 7, 2, 1, 9, 6, 3],
                               [6, 3, 2, 5, 9, 4, 7, 8, 1]]
-        let s:Solver = Solver(board: board)
+        let s:Solver = Solver()
         XCTAssertEqual([1,7,5,8,3,2,9,4,6], s.getColumn(board: board, yPos: 0))
     }
     
@@ -67,7 +58,7 @@ class SolverTest: XCTestCase {
                               [9, 7, 1, 8, 6, 3, 4, 2, 5],
                               [4, 5, 8, 7, 2, 1, 9, 6, 3],
                               [6, 3, 2, 5, 9, 4, 7, 8, 1]]
-        let s:Solver = Solver(board: board)
+        let s:Solver = Solver()
         XCTAssertEqual([4,2,5,9,6,3,7,8,1], s.getSquare(board: board, xPos: 6, yPos: 7))
         XCTAssertEqual([9,4,6,3,1,8,5,2,7],s.getSquare(board: board, xPos: 3, yPos: 3))
         XCTAssertEqual([1,9,3,7,8,4,5,2,6],s.getSquare(board: board, xPos: 2, yPos: 1))
@@ -83,7 +74,7 @@ class SolverTest: XCTestCase {
                               [9, 7, 1, 8, 6, 3, 4, 2, 5],
                               [4, 5, 8, 7, 0, 1, 9, 6, 3],
                               [6, 3, 2, 5, 9, 4, 7, 8, 1]]
-        let s:Solver = Solver(board: board)
+        let s:Solver = Solver()
         XCTAssertEqual(Set([1]), s.getMissingElements(board: board, xPos: 0, yPos: 0))
         XCTAssertEqual(Set([8]), s.getMissingElements(board: board, xPos: 1, yPos: 1))
         XCTAssertEqual(Set([2]), s.getMissingElements(board: board, xPos: 7, yPos: 4))
@@ -101,7 +92,7 @@ class SolverTest: XCTestCase {
                               [0, 2, 4, 0, 6, 0, 8, 0, 7],
                               [8, 0, 0, 0, 0, 0, 6, 0, 0],
                               [0, 0, 6, 8, 9, 1, 4, 0, 2]]
-        let s: Solver = Solver(board:board)
+        let s: Solver = Solver()
         if (s.solve(board: &board)) {
             for i in board {
                 print(i)

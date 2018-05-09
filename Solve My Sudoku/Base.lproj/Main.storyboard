@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKE-w2-Abx">
-                                <rect key="frame" x="0.0" y="64" width="414" height="936"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="886"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uy-6o-jzU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-p8-x5m">
-                                                <rect key="frame" x="20" y="20" width="374" height="275.33333333333331"/>
+                                                <rect key="frame" x="20" y="60" width="374" height="275.33333333333331"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-2b-7Sf">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="97.333333333333329"/>
@@ -143,7 +143,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fy0-rR-Wx3" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="39.333333333333329" width="374" height="29"/>
+                                                                <rect key="frame" x="0.0" y="39.333333333333343" width="374" height="29"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-Ai-zQh">
                                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
@@ -588,7 +588,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-ic-Trb" customClass="SudokuRowStackView" customModule="Solve_My_Sudoku" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="58" width="374" height="29"/>
+                                                                <rect key="frame" x="0.0" y="57.999999999999972" width="374" height="29"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tui-Wk-jAv">
                                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
@@ -1037,28 +1037,48 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-z0-iEV">
-                                                <rect key="frame" x="50" y="355.33333333333331" width="314" height="104.66666666666669"/>
-                                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="80" y="385.33333333333331" width="254" height="63.666666666666686"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="3:1" id="0yH-Nh-dV8"/>
+                                                    <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="16:4" id="0yH-Nh-dV8"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Button">
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" backgroundImage="SolveButton1">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ft-Wv-mG6"/>
                                                 </connections>
                                             </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-6t-3UH">
+                                                <rect key="frame" x="354" y="20" width="40" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-bB-YQ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                        <state key="normal" title="clear">
+                                                            <color key="titleColor" red="0.19215686274509802" green="0.17254901960784313" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clearInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z01-q3-Ph8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="YEq-6t-3UH" secondAttribute="height" multiplier="4:3" id="Gku-N6-wG1"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="top" secondItem="S2V-p8-x5m" secondAttribute="bottom" constant="60" id="CsH-Ix-m2T"/>
-                                            <constraint firstItem="S2V-p8-x5m" firstAttribute="top" secondItem="0uy-6o-jzU" secondAttribute="top" constant="20" id="Gqm-u4-qFn"/>
-                                            <constraint firstAttribute="trailing" secondItem="4ZN-z0-iEV" secondAttribute="trailing" constant="50" id="IyT-eu-t8A"/>
+                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="top" secondItem="S2V-p8-x5m" secondAttribute="bottom" constant="50" id="CsH-Ix-m2T"/>
+                                            <constraint firstAttribute="trailing" secondItem="YEq-6t-3UH" secondAttribute="trailing" constant="20" id="IJ7-6o-jHi"/>
+                                            <constraint firstAttribute="trailing" secondItem="4ZN-z0-iEV" secondAttribute="trailing" constant="80" id="IyT-eu-t8A"/>
                                             <constraint firstAttribute="height" constant="1000" id="Xch-Ua-aAY"/>
-                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="50" id="d3O-yY-VEd"/>
+                                            <constraint firstItem="4ZN-z0-iEV" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="80" id="d3O-yY-VEd"/>
                                             <constraint firstItem="S2V-p8-x5m" firstAttribute="leading" secondItem="0uy-6o-jzU" secondAttribute="leading" constant="20" id="gjL-pa-rOJ"/>
+                                            <constraint firstItem="YEq-6t-3UH" firstAttribute="top" secondItem="0uy-6o-jzU" secondAttribute="top" constant="20" id="lpW-qv-B0t"/>
+                                            <constraint firstItem="S2V-p8-x5m" firstAttribute="top" secondItem="YEq-6t-3UH" secondAttribute="bottom" constant="10" id="pGJ-fC-0Vm"/>
                                             <constraint firstAttribute="trailing" secondItem="S2V-p8-x5m" secondAttribute="trailing" constant="20" id="uAm-kx-aXE"/>
                                         </constraints>
                                     </view>
@@ -1072,18 +1092,19 @@
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmq-tV-ccC">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Solve My Sudoku" id="uLG-AM-RpL"/>
+                                    <navigationItem title="Enter the Puzzle" id="uLG-AM-RpL"/>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PKE-w2-Abx" secondAttribute="bottom" id="5Ky-8s-aLj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PKE-w2-Abx" secondAttribute="bottom" constant="50" id="5Ky-8s-aLj"/>
                             <constraint firstItem="0uy-6o-jzU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Cuc-N6-Mup"/>
                             <constraint firstItem="fmq-tV-ccC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MJa-V8-FPi"/>
                             <constraint firstItem="PKE-w2-Abx" firstAttribute="top" secondItem="fmq-tV-ccC" secondAttribute="bottom" id="MSg-YG-0aX"/>
@@ -1186,4 +1207,7 @@
             <point key="canvasLocation" x="136.23188405797103" y="131.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SolveButton1" width="192" height="54"/>
+    </resources>
 </document>

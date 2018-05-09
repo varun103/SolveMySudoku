@@ -109,6 +109,8 @@ class ViewController: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         self.view.endEditing(false)
+        
+        // Input Validation
         if self.userInputCellCount() < 0 {
             print(self.userInputCellCount())
             let alert = UIAlertController(title: "Invalid Input", message: "Need atleast 17 digits to solve the puzzle", preferredStyle: UIAlertControllerStyle.alert)
@@ -118,8 +120,17 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         self.greyOutEmptyCells()
-        print(self.sudokuBoard)
+        SolverService(userInput: self.sudokuBoard).solve()
     }
+    
+    @IBAction func clearInput(_ sender: Any) {
+        for row in self.sudokuBoard {
+            for cell in row {
+                cell.reset()
+            }
+        }
+    }
+    
     
     /// - Returns: The number of cells that have user input
     func userInputCellCount() -> Int {
@@ -129,9 +140,9 @@ class ViewController: UIViewController {
     func greyOutEmptyCells() {
         self.sudokuBoard.joined().forEach( {(cell:SudoKoCellView) -> Void in
             if cell.integerValue == 0 {
-                cell.greyOut(true)
+                cell.setAsEmptyCell(true)
             } else {
-                cell.greyOut(false)
+                cell.setAsEmptyCell(false)
             }
         })
     }
@@ -163,6 +174,10 @@ class ViewController: UIViewController {
                             [g0,g1,g2,g3,g4,g5,g6,g7,g8],
                             [h0,h1,h2,h3,h4,h5,h6,h7,h8],
                             [i0,i1,i2,i3,i4,i5,i6,i7,i8]]
+        
+        let x = UIColor(red: 152.0/255.0, green: 218.0/255.0, blue: 252.0/255.0, alpha: 82.0)
+        UIApplication.shared.statusBarView?.backgroundColor = x
+
     }
     
     func doneEditing() {
@@ -194,9 +209,9 @@ class ViewController: UIViewController {
         squarePath.addLine(to: CGPoint(x:width, y:secondHorizontal))
         
         shapeLayer.path = squarePath.cgPath
-        shapeLayer.strokeColor = UIColor.gray.cgColor
+        shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineWidth = 2.0
+        shapeLayer.lineWidth = 1.5
         self.shapeLayer.frame = self.stack.bounds
     }
     
@@ -204,6 +219,14 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
 }
+extension UIApplication {
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
+    }
+}
+
+
 
 

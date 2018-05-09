@@ -8,36 +8,32 @@
 
 import UIKit
 
+/// Heart of the Sudoku Puzzle
 class Solver {
     
     var EMPTY = 0
     
     let indices = Set([1,2,3,4,5,6,7,8,9])
     
-    var board:[[Int]]
-    
-    init(board: [[Int]]) {
-        self.board = board
-    }
-    
-    func solve(board: inout [[Int]]) -> Bool {
+    func solve(board: inout [[Int]], startTime: Double = Date().timeIntervalSince1970) -> Bool {
+        
+        if Date().timeIntervalSince1970 - startTime > 15 {
+            return false
+        }
         
         var notDone = false
-        
         for x in (0...8) {
             for y in (0...8) {
                 if board[x][y] == 0 {
                     notDone = true
                     let missingElements = self.getMissingElements(board: board, xPos: x, yPos: y)
-                    
                     if missingElements.count == 0 {
                         return false
                     }
-                        
                     else {
                         for element in missingElements {
                             board[x][y] = element
-                            if !solve(board: &board) {
+                            if !solve(board: &board, startTime: startTime) {
                                 board[x][y] = 0
                             } else {
                                 break
@@ -56,6 +52,20 @@ class Solver {
             return true
         }
         return false
+    }
+    
+    func hasDuplicates(board: [[Int]]) {
+        var rowNumber = 0
+        for row in board {
+            var columnNumber = 0
+            for columnValue in row {
+                getRow(board: board, xPos: rowNumber)
+                getColumn(board: board, yPos: columnNumber)
+                getSquare(board: board, xPos: rowNumber, yPos: columnNumber)
+                columnNumber += 1
+            }
+            rowNumber += 1
+        }
     }
     
     func getMissingElements(board: [[Int]], xPos:Int, yPos:Int) -> Set<Int> {
