@@ -19,6 +19,7 @@
 		559C431F209AFE2600D637F3 /* SolverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C431E209AFE2600D637F3 /* SolverService.swift */; };
 		55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A12094F88600EA543A /* SudoKoCellView.swift */; };
 		55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A320966E3F00EA543A /* SudokuRowStackView.swift */; };
+		6E079258E93B93FF43B1A1E4 /* libPods-Solve My Sudoku.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		559C431E209AFE2600D637F3 /* SolverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolverService.swift; sourceTree = "<group>"; };
 		55A360A12094F88600EA543A /* SudoKoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoKoCellView.swift; sourceTree = "<group>"; };
 		55A360A320966E3F00EA543A /* SudokuRowStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuRowStackView.swift; sourceTree = "<group>"; };
+		71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Solve My Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB32AD45917940277F94DAB /* Pods-Solve My Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solve My Sudoku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Solve My Sudoku/Pods-Solve My Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
+		A53EF1EC5C448BF190597C6E /* Pods-Solve My Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solve My Sudoku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Solve My Sudoku/Pods-Solve My Sudoku.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E079258E93B93FF43B1A1E4 /* libPods-Solve My Sudoku.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DFBD2F45438AC5C89B3CC74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		558B65BC2060B213008DA38E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,8 @@
 				558B65DF2060B213008DA38E /* Solve My SudokuTests */,
 				558B65EA2060B213008DA38E /* Solve My SudokuUITests */,
 				558B65C62060B213008DA38E /* Products */,
+				8031116DDF0E38A9D3B11992 /* Pods */,
+				4DFBD2F45438AC5C89B3CC74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = "Solve My SudokuUITests";
 			sourceTree = "<group>";
 		};
+		8031116DDF0E38A9D3B11992 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FB32AD45917940277F94DAB /* Pods-Solve My Sudoku.debug.xcconfig */,
+				A53EF1EC5C448BF190597C6E /* Pods-Solve My Sudoku.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558B65F02060B213008DA38E /* Build configuration list for PBXNativeTarget "Solve My Sudoku" */;
 			buildPhases = (
+				040CC0928D791CB0FBBC3E54 /* [CP] Check Pods Manifest.lock */,
 				558B65C12060B213008DA38E /* Sources */,
 				558B65C22060B213008DA38E /* Frameworks */,
 				558B65C32060B213008DA38E /* Resources */,
@@ -268,6 +293,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		040CC0928D791CB0FBBC3E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Solve My Sudoku-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		558B65C12060B213008DA38E /* Sources */ = {
@@ -444,14 +490,18 @@
 		};
 		558B65F12060B213008DA38E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB32AD45917940277F94DAB /* Pods-Solve My Sudoku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UEMEQ8LN56;
+				DEVELOPMENT_TEAM = 235M73V84X;
 				INFOPLIST_FILE = "Solve My Sudoku/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.internal.Solve-My-Sudoku";
+				PRODUCT_BUNDLE_IDENTIFIER = org.internal.SolveMySudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,14 +509,18 @@
 		};
 		558B65F22060B213008DA38E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53EF1EC5C448BF190597C6E /* Pods-Solve My Sudoku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UEMEQ8LN56;
+				DEVELOPMENT_TEAM = 235M73V84X;
 				INFOPLIST_FILE = "Solve My Sudoku/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.internal.Solve-My-Sudoku";
+				PRODUCT_BUNDLE_IDENTIFIER = org.internal.SolveMySudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

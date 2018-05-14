@@ -60,7 +60,7 @@ class SolverTest: XCTestCase {
                               [6, 3, 2, 5, 9, 4, 7, 8, 1]]
         let s:Solver = Solver()
         XCTAssertEqual([4,2,5,9,6,3,7,8,1], s.getSquare(board: board, xPos: 6, yPos: 7))
-        XCTAssertEqual([9,4,6,3,1,8,5,2,7],s.getSquare(board: board, xPos: 3, yPos: 3))
+        XCTAssertEqual([9,3,5,4,1,2,6,8,7],s.getSquare(board: board, xPos: 3, yPos: 3))
         XCTAssertEqual([1,9,3,7,8,4,5,2,6],s.getSquare(board: board, xPos: 2, yPos: 1))
     }
     
@@ -98,5 +98,43 @@ class SolverTest: XCTestCase {
                 print(i)
             }
         }
+    }
+    
+    func testFindDuplicatesAtHappyPath() {
+        let array = [1,2,3,4,5,4,0,0,0]
+        let s = Solver()
+        let duplicatePositions = s.findDuplicatesAt(in: array)
+        XCTAssertTrue(duplicatePositions.count == 2)
+        XCTAssertTrue(duplicatePositions.contains(3))
+        XCTAssertTrue(duplicatePositions.contains(5))
+    }
+    
+    func testFindDuplicatesAtEmptyArray() {
+        let array:[Int] = []
+        let s = Solver()
+        let duplicatePositions = s.findDuplicatesAt(in: array)
+        XCTAssertTrue(duplicatePositions.count == 0)
+    }
+    
+    func testFindDuplicatesAtArrayWithZerosOnly() {
+        let array:[Int] = [0,0,0,0,0,0,0,0]
+        let s = Solver()
+        let duplicatePositions = s.findDuplicatesAt(in: array)
+        XCTAssertTrue(duplicatePositions.count == 0)
+    }
+    
+    func testFindDuplicatesAtInBoardHappyPath() {
+        let board: [[Int]] = [[6, 0, 6, 3, 4, 9, 7, 0, 0],
+                              [2, 0, 1, 0, 0, 0, 0, 0, 3],
+                              [3, 0, 7, 0, 1, 3, 2, 8, 0],
+                              [0, 0, 9, 1, 0, 0, 0, 4, 0],
+                              [4, 0, 0, 4, 2, 6, 0, 0, 0],
+                              [0, 7, 0, 0, 0, 8, 1, 0, 0],
+                              [0, 2, 4, 0, 6, 0, 8, 0, 7],
+                              [8, 7, 0, 0, 0, 0, 6, 0, 0],
+                              [0, 0, 6, 8, 9, 1, 4, 0, 2]]
+        let s = Solver()
+        let duplicatePositions = s.findDuplicatesAt(in: board)
+        //XCTAssertTrue(duplicatePositions.count == 8)
     }
 }

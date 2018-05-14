@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var embeddedView: UIView!
     let shapeLayer = CAShapeLayer()
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
+    @IBOutlet weak var adsBannerView: GADBannerView!
     
     @IBOutlet weak var a0: SudoKoCellView!
     @IBOutlet weak var a1: SudoKoCellView!
@@ -104,6 +109,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var i7: SudoKoCellView!
     @IBOutlet weak var i8: SudoKoCellView!
     
+    @IBOutlet weak var solveButton: UIButton!
     
     var sudokuBoard:[[SudoKoCellView]] = []
     
@@ -111,16 +117,29 @@ class ViewController: UIViewController {
         self.view.endEditing(false)
         
         // Input Validation
-        if self.userInputCellCount() < 0 {
-            print(self.userInputCellCount())
+        if self.userInputCellCount() < 17 {
             let alert = UIAlertController(title: "Invalid Input", message: "Need atleast 17 digits to solve the puzzle", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { _ in
-                print("a")
-            }) )
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { _ in }) )
             self.present(alert, animated: true, completion: nil)
+            return
         }
+        let solverService: SolverService = SolverService(userInput: self.sudokuBoard)
+        let duplicates = solverService.checkForDuplicates()
+        if (duplicates.count > 0) {
+            self.highlightCells(cells: duplicates)
+            let alert = UIAlertController(title: "Invalid Input", message: "Duplicate numbers", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Fix", style: UIAlertActionStyle.default, handler: { _ in }) )
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+    
         self.greyOutEmptyCells()
-        SolverService(userInput: self.sudokuBoard).solve()
+        self.solveButton.isEnabled = false
+        self.clearButton.isEnabled = false
+        solverService.solve {
+            self.solveButton.isEnabled = true
+            self.clearButton.isEnabled = true
+        }
     }
     
     @IBAction func clearInput(_ sender: Any) {
@@ -145,6 +164,12 @@ class ViewController: UIViewController {
                 cell.setAsEmptyCell(false)
             }
         })
+    }
+    
+    func highlightCells(cells:[(Int,Int)]) {
+        for cell in cells {
+            self.sudokuBoard[cell.0][cell.1].highlight()
+        }
     }
     
     func convertTo2DIntegerArray(sudokuBoard:[[SudoKoCellView]]) -> [[Int]] {
@@ -177,12 +202,15 @@ class ViewController: UIViewController {
         
         let x = UIColor(red: 152.0/255.0, green: 218.0/255.0, blue: 252.0/255.0, alpha: 82.0)
         UIApplication.shared.statusBarView?.backgroundColor = x
-
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        adsBannerView.delegate = self
+        adsBannerView.adUnitID = "ca-app-pub-1253615041445374/7750305855"
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
     }
     
-    func doneEditing() {
-        
-    }
     
     /// Had to add the bezier path code here since
     /// it needs to resize for different screen sizes.
@@ -219,8 +247,19 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    override var shouldAutorotate: Bool {
+        get{
+            return true
+        }
+    }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        get{
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
 }
+
 extension UIApplication {
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView

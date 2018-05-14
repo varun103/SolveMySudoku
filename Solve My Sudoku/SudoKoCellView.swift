@@ -13,6 +13,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     let backgroundImage = "Rectangle"
     let backgroundImageGrey = "Rectangle_grey"
 
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.clearsOnInsertion = true
@@ -23,12 +24,11 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
         let heightConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.lessThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 80)
         self.addConstraints([widthConstraint, heightConstraint])
         
-        let toolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 30))
+        let toolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
         toolBar.barStyle = .default
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target:self , action: #selector(self.doneEditing))
         toolBar.setItems([flexSpace,doneButton], animated: true)
-        
         self.inputAccessoryView = toolBar
         self.reset()
     }
@@ -60,6 +60,11 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
         self.background = UIImage(named: self.backgroundImage)!
         self.font = UIFont(name: "AvenirNext-Bold", size: 21)
         self.textColor = UIColor(red: 49/255, green: 54/255, blue: 50/255, alpha: 100)
+    }
+    
+    func highlight() {
+       // self.background = UIImage(named: self.backgroundImageHighlight)!
+        self.textColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 100/100)
 
     }
     
@@ -71,6 +76,8 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
             self.textColor = UIColor(red: 49/255, green: 54/255, blue: 50/255, alpha: 80/100)
         } else {
             self.background = UIImage(named: self.backgroundImageGrey)!
+            self.font = UIFont(name: "AvenirNext-Bold", size: 21)
+            self.textColor = UIColor(red: 49/255, green: 54/255, blue: 50/255, alpha: 100)
         }
     }
     
@@ -80,6 +87,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
         if let x = textField.text?.lengthOfBytes(using: String.Encoding.utf8) {
             if (x >= 1) {
                 if (string == ""){
+                    self.reset()
                     return true
                 }
                 return false

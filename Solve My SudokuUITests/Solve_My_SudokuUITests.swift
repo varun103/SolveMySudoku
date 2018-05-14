@@ -67,8 +67,6 @@ class Solve_My_SudokuUITests: XCTestCase {
     }
     
     func test2() {
-        
-        
         let app = XCUIApplication()
         let element7 = app.scrollViews.otherElements.containing(.button, identifier:"Button").children(matching: .other).element
         let element3 = element7.children(matching: .other).element(boundBy: 0)
@@ -167,7 +165,106 @@ class Solve_My_SudokuUITests: XCTestCase {
         app.scrollViews.otherElements.containing(.button, identifier:"Button").children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 0).children(matching: .other).element(boundBy: 2).children(matching: .textField).element(boundBy: 1).tap()
         app/*@START_MENU_TOKEN@*/.keys["4"]/*[[".keyboards.keys[\"4\"]",".keys[\"4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        
     }
     
+    
+    func test3() {
+        
+        let app = XCUIApplication()
+        let element10 = app.scrollViews.otherElements.containing(.button, identifier:"SolveButton1").children(matching: .other).element(boundBy: 1)
+        let element4 = element10.children(matching: .other).element(boundBy: 0)
+        let element12 = element4.children(matching: .other).element(boundBy: 0)
+        let element = element12.children(matching: .other).element(boundBy: 0)
+        element.children(matching: .textField).element(boundBy: 0).tap()
+        
+        let key = app/*@START_MENU_TOKEN@*/.keys["8"]/*[[".keyboards.keys[\"8\"]",".keys[\"8\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        //key.tap()
+        key.tap()
+        element.children(matching: .textField).element(boundBy: 2).tap()
+        
+        let key2 = app/*@START_MENU_TOKEN@*/.keys["5"]/*[[".keyboards.keys[\"5\"]",".keys[\"5\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key2.tap()
+        key2.tap()
+        
+        let element2 = element12.children(matching: .other).element(boundBy: 1)
+        element2.children(matching: .textField).element(boundBy: 1).tap()
+        
+        let key3 = app/*@START_MENU_TOKEN@*/.keys["7"]/*[[".keyboards.keys[\"7\"]",".keys[\"7\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key3.tap()
+        key3.tap()
+        element2.children(matching: .textField).element(boundBy: 2).tap()
+        
+        let key4 = app/*@START_MENU_TOKEN@*/.keys["6"]/*[[".keyboards.keys[\"6\"]",".keys[\"6\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key4.tap()
+        key4.tap()
+        
+        let element3 = element12.children(matching: .other).element(boundBy: 2)
+        element3.children(matching: .textField).element(boundBy: 0).tap()
+        
+        let key5 = app/*@START_MENU_TOKEN@*/.keys["4"]/*[[".keyboards.keys[\"4\"]",".keys[\"4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key5.tap()
+        key5.tap()
+        element3.children(matching: .textField).element(boundBy: 2).tap()
+        
+        let key6 = app/*@START_MENU_TOKEN@*/.keys["1"]/*[[".keyboards.keys[\"1\"]",".keys[\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key6.tap()
+        key6.tap()
+        element4.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 2).children(matching: .textField).element(boundBy: 0).tap()
+        key2.tap()
+        key2.tap()
+        
+        let element5 = element4.children(matching: .other).element(boundBy: 2).children(matching: .other).element(boundBy: 2)
+        element5.children(matching: .textField).element(boundBy: 0).tap()
+        key.tap()
+        key.tap()
+        element5.children(matching: .textField).element(boundBy: 1).tap()
+        key4.tap()
+        key4.tap()
+        
+        let element11 = element10.children(matching: .other).element(boundBy: 1)
+        let element13 = element11.children(matching: .other).element(boundBy: 0)
+        let element6 = element13.children(matching: .other).element(boundBy: 1)
+        element6.children(matching: .textField).element(boundBy: 1).tap()
+        
+        let key7 = app/*@START_MENU_TOKEN@*/.keys["2"]/*[[".keyboards.keys[\"2\"]",".keys[\"2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key7.tap()
+        key7.tap()
+        element6.children(matching: .textField).element(boundBy: 2).tap()
+        key.tap()
+        key.tap()
+        
+        let element14 = element10.children(matching: .other).element(boundBy: 2)
+        let element8 = element14.children(matching: .other).element(boundBy: 0)
+        let element7 = element8.children(matching: .other).element(boundBy: 0)
+        element7.children(matching: .textField).element(boundBy: 1).tap()
+        key6.tap()
+        key6.tap()
+        element7.children(matching: .textField).element(boundBy: 2).tap()
+        key7.tap()
+        key7.tap()
+        element8.children(matching: .other).element(boundBy: 1).children(matching: .textField).element(boundBy: 1).tap()
+        key4.tap()
+        key4.tap()
+        
+        let element9 = element8.children(matching: .other).element(boundBy: 2)
+        element9.children(matching: .textField).element(boundBy: 0).tap()
+        app/*@START_MENU_TOKEN@*/.keys["9"]/*[[".keyboards.keys[\"9\"]",".keys[\"9\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        element9.children(matching: .textField).element(boundBy: 1).tap()
+        key2.tap()
+        key2.tap()
+        element14.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 2).children(matching: .textField).element(boundBy: 2).tap()
+        
+        let key8 = app/*@START_MENU_TOKEN@*/.keys["3"]/*[[".keyboards.keys[\"3\"]",".keys[\"3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key8.tap()
+        key8.tap()
+        element13.children(matching: .other).element(boundBy: 0).children(matching: .textField).element(boundBy: 2).tap()
+        key8.tap()
+        key8.tap()
+        element11.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 0).children(matching: .textField).element(boundBy: 0).tap()
+        XCUIApplication()/*@START_MENU_TOKEN@*/.keys["9"]/*[[".keyboards.keys[\"9\"]",".keys[\"9\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().scrollViews.otherElements.buttons["SolveButton1"].tap()
+        
+        
+        
+    }
 }

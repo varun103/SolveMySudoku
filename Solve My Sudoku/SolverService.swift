@@ -19,17 +19,21 @@ class SolverService {
         self.convertedInput = self.convert(cellViewArray: self.input)
     }
     
-    func solve() {
+    func checkForDuplicates() -> [(Int,Int)]{
+        let solver = Solver()
+        return solver.findDuplicatesAt(in: self.convertedInput)
+    }
+    
+    func solve(completion:@escaping () -> Void) {
+        
         DispatchQueue.global().async {
             let solve = Solver()
             let result = solve.solve(board: &self.convertedInput)
             
-            if result {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if result {
                     self.convertBack()
-                }
-            } else {
-                DispatchQueue.main.async {
+                } else {
                     let alert = UIAlertController(title: "Sorry", message: "Unable solve puzzle. Please check the input and try again", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: { _ in
                         print("a")
@@ -43,6 +47,7 @@ class SolverService {
                     }
                     rootViewController?.present(alert, animated: true, completion: nil)
                 }
+                completion()
             }
         }
     }
@@ -59,17 +64,17 @@ class SolverService {
         }
     }
     
-    private func convert(cellViewArray: [[SudoKoCellView]]) -> [[Int]] {
-        var intArray = [[Int]] (repeating: [Int](repeating: 0, count: 9), count: 9)
+    func convert(cellViewArray: [[SudoKoCellView]]) -> [[Int]] {
+        var int2DArray = [[Int]] (repeating: [Int](repeating: 0, count: 9), count: 9)
         var rowNumber = 0
         for row in cellViewArray {
             var columnNumber = 0
             for column in row {
-                intArray[rowNumber][columnNumber] = column.integerValue
+                int2DArray[rowNumber][columnNumber] = column.integerValue
                 columnNumber += 1
             }
             rowNumber += 1
         }
-        return intArray
+        return int2DArray
     }
 }
