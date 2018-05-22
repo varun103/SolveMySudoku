@@ -137,4 +137,19 @@ class SolverTest: XCTestCase {
         let duplicatePositions = s.findDuplicatesAt(in: board)
         //XCTAssertTrue(duplicatePositions.count == 8)
     }
+    
+    func testCreate() {
+        let s = Solver()
+        for i in 0...1000 {
+            var temp:[Int]=[]
+            let x = s.createPuzzle()
+            if i == 0 {
+                temp = x[1]
+            }
+            print(x[1])
+            if x[1] == temp {
+                print("MATCH")
+            }
+        }
+    }
 }

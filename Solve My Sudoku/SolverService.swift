@@ -11,18 +11,20 @@ import UIKit
 /// Sudoku Solver Service
 class SolverService {
     
-    var input: [[SudoKoCellView]]
+    var puzzle: [[SudoKoCellView]]
     var convertedInput: [[Int]] = [[]]
+    private (set) var solved:Bool
     
     init(userInput: [[SudoKoCellView]]) {
-        self.input = userInput
-        self.convertedInput = self.convert(cellViewArray: self.input)
+        self.puzzle = userInput
+        self.solved = false
+        self.convertedInput = self.convert(cellViewArray: self.puzzle)
     }
     
     func checkForDuplicates() -> [(Int,Int)]{
         let solver = Solver()
         return solver.findDuplicatesAt(in: self.convertedInput)
-    }
+    } 
     
     func solve(completion:@escaping () -> Void) {
         
@@ -32,11 +34,11 @@ class SolverService {
             
             DispatchQueue.main.async {
                 if result {
-                    self.convertBack()
+                    self.solved = true
+                    self.updateResults()
                 } else {
                     let alert = UIAlertController(title: "Sorry", message: "Unable solve puzzle. Please check the input and try again", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: { _ in
-                        print("a")
                     }) )
                     var rootViewController = UIApplication.shared.keyWindow?.rootViewController
                     if let navigationController = rootViewController as? UINavigationController {
@@ -52,12 +54,12 @@ class SolverService {
         }
     }
     
-    private func convertBack() {
+    func updateResults() {
         var rowNumber = 0
         for row in self.convertedInput {
             var columnNumber = 0
             for column in row {
-                self.input[rowNumber][columnNumber].integerValue = column
+                self.puzzle[rowNumber][columnNumber].integerValue = column
                 columnNumber += 1
             }
             rowNumber += 1

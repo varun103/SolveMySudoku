@@ -239,7 +239,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         shapeLayer.path = squarePath.cgPath
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineWidth = 1.5
+        shapeLayer.lineWidth = 1.7
         self.shapeLayer.frame = self.stack.bounds
     }
     

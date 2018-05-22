@@ -15,9 +15,9 @@ class Solver {
     
     let indices = Set([1,2,3,4,5,6,7,8,9])
     
-    func solve(board: inout [[Int]], startTime: Double = Date().timeIntervalSince1970) -> Bool {
+    func solve(board: inout [[Int]], startTime: Double = Date().timeIntervalSince1970, maxTime: Double = 15) -> Bool {
         
-        if Date().timeIntervalSince1970 - startTime > 15 {
+        if Date().timeIntervalSince1970 - startTime > maxTime {
             return false
         }
         
@@ -54,10 +54,26 @@ class Solver {
         return false
     }
     
-    /// <#Description#>
-    ///
-    /// - Parameter board: <#board description#>
-    /// - Returns: <#return value description#>
+    func createPuzzle() -> [[Int]] {
+        var board = self.createPuzzleInput()
+        while !self.solve(board: &board, maxTime: 2) {
+            board = self.createPuzzleInput()
+        }
+        return board
+    }
+    
+    func createPuzzleInput() -> [[Int]] {
+        var board:[[Int]] = [[Int]] (repeating: [Int](repeating: 0, count: 9), count: 9)
+        board[0][0] = Int(arc4random_uniform(7)+1)
+        board[1][4] = Int(arc4random_uniform(7)+1)
+        board[3][1] = Int(arc4random_uniform(7)+1)
+        board[5][6] = Int(arc4random_uniform(7)+1)
+        board[6][2] = Int(arc4random_uniform(7)+1)
+        board[8][8] = Int(arc4random_uniform(7)+1)
+        return board
+    }
+    
+    /// Finds the duplicate elements on the board
     func findDuplicatesAt(in board: [[Int]]) -> [(Int,Int)]{
         var duplicatePositions:[(Int,Int)] = []
         var rowNumber = 0
