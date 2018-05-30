@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		550E011420A2D7E100ECD22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550E011320A2D7E000ECD22E /* Assets.xcassets */; };
+		5540E0FE20B4E9940059CEED /* TextColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540E0FD20B4E9940059CEED /* TextColors.swift */; };
+		5540E10020B68ACB0059CEED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540E0FF20B68ACB0059CEED /* PuzzleViewController.swift */; };
+		5540E10220B691A10059CEED /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540E10120B691A10059CEED /* SuperViewController.swift */; };
+		5540E10420B6AA740059CEED /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540E10320B6AA740059CEED /* Configuration.swift */; };
+		5540E10620B813230059CEED /* PuzzleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540E10520B813230059CEED /* PuzzleService.swift */; };
 		558B65C92060B213008DA38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65C82060B213008DA38E /* AppDelegate.swift */; };
 		558B65CB2060B213008DA38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65CA2060B213008DA38E /* ViewController.swift */; };
 		558B65CE2060B213008DA38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558B65CC2060B213008DA38E /* Main.storyboard */; };
@@ -41,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		550E011320A2D7E000ECD22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5540E0FD20B4E9940059CEED /* TextColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColors.swift; sourceTree = "<group>"; };
+		5540E0FF20B68ACB0059CEED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		5540E10120B691A10059CEED /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
+		5540E10320B6AA740059CEED /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		5540E10520B813230059CEED /* PuzzleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleService.swift; sourceTree = "<group>"; };
 		558B65C52060B213008DA38E /* Solve My Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solve My Sudoku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558B65C82060B213008DA38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558B65CA2060B213008DA38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				550E011320A2D7E000ECD22E /* Assets.xcassets */,
+				5540E0FD20B4E9940059CEED /* TextColors.swift */,
 				55A360A12094F88600EA543A /* SudoKoCellView.swift */,
 				558B65C82060B213008DA38E /* AppDelegate.swift */,
 				558B65CA2060B213008DA38E /* ViewController.swift */,
@@ -133,6 +144,10 @@
 				558B65FB206349C3008DA38E /* Solver.swift */,
 				55A360A320966E3F00EA543A /* SudokuRowStackView.swift */,
 				559C431E209AFE2600D637F3 /* SolverService.swift */,
+				5540E0FF20B68ACB0059CEED /* PuzzleViewController.swift */,
+				5540E10120B691A10059CEED /* SuperViewController.swift */,
+				5540E10320B6AA740059CEED /* Configuration.swift */,
+				5540E10520B813230059CEED /* PuzzleService.swift */,
 			);
 			path = "Solve My Sudoku";
 			sourceTree = "<group>";
@@ -321,12 +336,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				558B65FC206349C3008DA38E /* Solver.swift in Sources */,
+				5540E10020B68ACB0059CEED /* PuzzleViewController.swift in Sources */,
+				5540E10220B691A10059CEED /* SuperViewController.swift in Sources */,
+				5540E0FE20B4E9940059CEED /* TextColors.swift in Sources */,
 				558B65D12060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld in Sources */,
 				558B65CB2060B213008DA38E /* ViewController.swift in Sources */,
 				558B65C92060B213008DA38E /* AppDelegate.swift in Sources */,
 				55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */,
 				55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */,
+				5540E10620B813230059CEED /* PuzzleService.swift in Sources */,
 				559C431F209AFE2600D637F3 /* SolverService.swift in Sources */,
+				5540E10420B6AA740059CEED /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -480,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -497,6 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 235M73V84X;
 				INFOPLIST_FILE = "Solve My Sudoku/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.SolveMySudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 235M73V84X;
 				INFOPLIST_FILE = "Solve My Sudoku/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.SolveMySudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";

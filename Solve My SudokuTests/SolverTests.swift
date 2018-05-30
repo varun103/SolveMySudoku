@@ -146,10 +146,6 @@ class SolverTest: XCTestCase {
             if i == 0 {
                 temp = x[1]
             }
-            print(x[1])
-            if x[1] == temp {
-                print("MATCH")
-            }
         }
     }
 }

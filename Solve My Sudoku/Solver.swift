@@ -15,7 +15,7 @@ class Solver {
     
     let indices = Set([1,2,3,4,5,6,7,8,9])
     
-    func solve(board: inout [[Int]], startTime: Double = Date().timeIntervalSince1970, maxTime: Double = 15) -> Bool {
+    func solve(board: inout [[Int]], startTime: Double = Date().timeIntervalSince1970, maxTime: Double = 17) -> Bool {
         
         if Date().timeIntervalSince1970 - startTime > maxTime {
             return false
@@ -62,7 +62,7 @@ class Solver {
         return board
     }
     
-    func createPuzzleInput() -> [[Int]] {
+    private func createPuzzleInput() -> [[Int]] {
         var board:[[Int]] = [[Int]] (repeating: [Int](repeating: 0, count: 9), count: 9)
         board[0][0] = Int(arc4random_uniform(7)+1)
         board[1][4] = Int(arc4random_uniform(7)+1)
