@@ -1,19 +1,22 @@
 //
-//  PuzzleViewController.swift
+//  ViewController.swift
 //  Solve My Sudoku
 //
-//  Created by Varun Ajmera on 5/23/18.
+//  Created by Varun Ajmera on 3/19/18.
 //  Copyright © 2018 Varun Ajmera. All rights reserved.
 //
 
 import UIKit
 import GoogleMobileAds
 
-class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
+class ViewController: SuperViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var stack: UIStackView!
-    @IBOutlet weak var clueButton: UIButton!
-    @IBOutlet weak var adBanner: GADBannerView!
+    let shapeLayer = CAShapeLayer()
+    
+    @IBOutlet weak var hintButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var adsBannerView: GADBannerView!
     
     @IBOutlet weak var a0: SudoKoCellView!
     @IBOutlet weak var a1: SudoKoCellView!
@@ -104,14 +107,125 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     @IBOutlet weak var i6: SudoKoCellView!
     @IBOutlet weak var i7: SudoKoCellView!
     @IBOutlet weak var i8: SudoKoCellView!
-   
-    let shapeLayer = CAShapeLayer()
-    var puzzle: Puzzle!
+    
+    @IBOutlet weak var solveButton: UIButton!
+    
+    @IBAction func hint(_ sender: Any) {
+        
+        if self.solverService == nil {
+            self.solverService = SolverService(userInput: self.sudokuBoard)
+        }
+            // If the instance exists but the puzzle has yet not been solved take
+            // in the new user input
+            // This can happen if the user inputted duplicates before
+        else if self.solverService != nil && !self.solverService.solved {
+            self.solverService.updatePuzzle(userInput: self.sudokuBoard)
+        }
+        
+        // Input Validation
+        if !(self.userInputValid(solver: self.solverService)) {
+            return
+        }
+        
+        // Don't solve it again - if the puzzle has been solved aready
+        if solverService.solved {
+            var cells = self.solverService.getEmptyCells()
+            if ((cells.count) > 0) {
+                let randomIndex = arc4random_uniform(UInt32((cells.count)))
+                let cell = cells[Int(randomIndex)]
+                self.solverService.updateThisResult(row: (cell.0), column: (cell.1))
+                self.sudokuBoard[(cell.0)][(cell.1)].type = .CLUE
+                self.enableUserInput()
+            }
+        } else {
+            self.greyOutEmptyCells()
+            self.disableUserInput()
+            solverService.solve { [weak self] result in
+                
+                DispatchQueue.main.async {
+                    if result {
+                        var cells = self?.solverService.getEmptyCells()
+                        if ((cells?.count)! > 0) {
+                            let randomIndex = arc4random_uniform(UInt32((cells?.count)!))
+                            let cell = cells?[Int(randomIndex)]
+                            self?.solverService.updateThisResult(row: (cell?.0)!, column: (cell?.1)!)
+                            self?.sudokuBoard[(cell?.0)!][(cell?.1)!].type = .CLUE
+                        }
+                    } else {
+                        self?.showAlert(title: "Sorry", message: "Unable solve puzzle. Please check the input and try again", actionMessage: "Try again")
+                    }
+                    self?.enableUserInput()
+                }
+            }
+        }
+        self.showInterstitialAd()
+    }
+    
+    @IBAction func calculate(_ sender: Any) {
+        self.view.endEditing(false)
+        self.solverService = SolverService(userInput: self.sudokuBoard)
+        
+        // Input Validation
+        if !(self.userInputValid(solver: self.solverService)) {
+            return
+        }
+        
+        self.greyOutEmptyCells()
+        self.disableUserInput()
+        
+        solverService.solve { [weak self] result in
+            DispatchQueue.main.async {
+                if result {
+                    self?.solverService.updatePuzzle()
+                } else {
+                    self?.showAlert(title: "Sorry", message: "Unable solve puzzle. Please check the input and try again", actionMessage: "Try again")
+                }
+                self?.enableUserInput()
+            }
+        }
+    }
+    
+    @IBAction func clearInput(_ sender: Any) {
+        for row in self.sudokuBoard {
+            for cell in row {
+                cell.reset()
+                cell.type = .EMPTY
+            }
+        }
+        self.solverService = nil
+        self.count = 0
+    }
+    
+    func userInputValid(solver: SolverService) -> Bool {
+        if solver.userInputCellCount() < PuzzleInput.minInput {
+            self.showAlert(title: "Invalid Input", message: "Need atleast 17 values to be a valid puzzle", actionMessage: "Fix")
+            return false
+        }
+        
+        let duplicates = solver.checkForDuplicates()
+        if (duplicates.count > 0) {
+            self.highlightCells(cells: duplicates)
+            self.showAlert(title: "Invalid Input", message: "Duplicate numbers", actionMessage: "Fix")
+            return false
+        }
+        return true
+    }
+    
+    func greyOutEmptyCells() {
+        self.sudokuBoard.joined().forEach( {(cell:SudoKoCellView) -> Void in
+            if cell.integerValue == 0 {
+                cell.type = .ANSWER
+            } else {
+                if cell.type != .CLUE {
+                    cell.type = .PUZZLE
+                }
+            }
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stack.layer.addSublayer(shapeLayer)
-        
         self.sudokuBoard = [[a0,a1,a2,a3,a4,a5,a6,a7,a8],
                             [b0,b1,b2,b3,b4,b5,b6,b7,b8],
                             [c0,c1,c2,c3,c4,c5,c6,c7,c8],
@@ -121,91 +235,41 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
                             [g0,g1,g2,g3,g4,g5,g6,g7,g8],
                             [h0,h1,h2,h3,h4,h5,h6,h7,h8],
                             [i0,i1,i2,i3,i4,i5,i6,i7,i8]]
-        puzzle = Puzzle(sudokuBoard: self.sudokuBoard)
-        puzzle.easy()
+        
         
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
-        adBanner.delegate = self
-        adBanner.adUnitID = Configuration.bannerAdUnit
-        adBanner.rootViewController = self
-        adBanner.load(request)
-    }
-    
-    // clear out everything except the puzzle
-    @IBAction func clear(_ sender: Any) {
-        for i in self.sudokuBoard.joined() {
-            if i.type != .PUZZLE {
-                i.reset()
-                i.type = .ANSWER
-            }
-        }
-    }
-    
-    @IBAction func newGame(_ sender: Any) {
-        self.sudokuBoard.joined().forEach { cell in
-            cell.reset()
-        }
-        self.viewDidLoad()
-    }
-    
-    
-    @IBAction func getClue(_ sender: Any) {
-        let cells = puzzle.getEmptyCells()
-        if cells.count > 0 {
-            let randomIndex = arc4random_uniform(UInt32((cells.count)))
-            let cell = cells[Int(randomIndex)]
-            self.puzzle.updateThisResult(row: cell.0, column: cell.1, as: .CLUE)
-        }
-        showInterstitialAd()
-    }
-    
-    @IBAction func check(_ sender: Any) {
-        var incorrectAnswers:[(Int,Int)] = []
-        let emptyCells = self.puzzle.getEmptyCells()
-        var rowCount = 0
-        for row in sudokuBoard {
-            var columnCount = 0
-            for column in row {
-                if (((column.type == .ANSWER) || (column.type == .ERROR)) && column.hasTextInput) {
-                    if !(column.integerValue == puzzle.solvedPuzzle[rowCount][columnCount]) {
-                        incorrectAnswers.append((rowCount,columnCount))
-                    }
-                }
-                columnCount += 1
-            }
-            rowCount += 1
-        }
+        adsBannerView.delegate = self
+        adsBannerView.adUnitID = Configuration.bannerAdUnit
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(disableUserInput))
         
-        if incorrectAnswers.count > 0 {
-            showInterstitialAd()
-            for inc in incorrectAnswers {
-                self.sudokuBoard[inc.0][inc.1].type = .ERROR
-            }
-            self.showAlert(title: "Oops", message: "Something's not right", actionMessage: "Try Again")
-            return
-        }
-        
-        if emptyCells.count == 0 {
-            self.showAlert(title: "CONGRATULATIONS!!", message: "Puzzle Solved", actionMessage: "Done")
-            return
-        } else {
-            showInterstitialAd()
-            self.showAlert(title: "Keep Going", message: "So far so good", actionMessage: "Complete it")
-            return
-        }
         
     }
     
+    @objc private func disableUserInput() {
+        self.solveButton.isEnabled = false
+        self.clearButton.isEnabled = false
+        self.hintButton.isEnabled = false
+    }
+    
+    private func enableUserInput() {
+        self.solveButton.isEnabled = true
+        self.clearButton.isEnabled = true
+        self.hintButton.isEnabled = true
+    }
+    
+    
+    /// Had to add the bezier path code here since
+    /// it needs to resize for different screen sizes.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        hintButton.titleLabel?.font = UIFont(name: TextFont.hintButton, size: hintButton.bounds.height)
+        hintButton.setTitleColor(TextColors.clues, for: UIControlState.normal)
         let squarePath = UIBezierPath(rect: self.stack.bounds)
         let width = self.stack.bounds.width
         let height = self.stack.bounds.height
-        
-        self.clueButton.titleLabel?.font = UIFont(name: TextFont.hintButton, size: clueButton.bounds.height)
-        self.clueButton.setTitleColor(TextColors.clues, for: UIControlState.normal)
         
         let firstVerticalCoord = width/3
         squarePath.move(to: CGPoint(x:firstVerticalCoord, y:0))
@@ -229,8 +293,15 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         shapeLayer.lineWidth = 1.8
         self.shapeLayer.frame = self.stack.bounds
         
-        self.sudokuBoard.joined().forEach { cell in
+        self.sudokuBoard.joined().forEach{ cell in
             cell.adjustFont()
         }
     }
+    
 }
+
+
+
+
+
+

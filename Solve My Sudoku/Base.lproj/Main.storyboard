@@ -14,10 +14,106 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="QQX-eA-CVS">
+            <objects>
+                <viewController storyboardIdentifier="settings" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="TXy-w8-LYD" customClass="SettingsViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xda-QO-7Ro">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUY-e8-Abi">
+                                <rect key="frame" x="50" y="120.00000000000003" width="314" height="418.66666666666674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c98-37-Mq8">
+                                        <rect key="frame" x="82.333333333333329" y="249.66666666666669" width="149.33333333333337" height="30"/>
+                                        <color key="backgroundColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="0.75187285958904104" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="c98-37-Mq8" secondAttribute="height" multiplier="5:1" id="IDn-XQ-wy1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveSettings:" destination="TXy-w8-LYD" eventType="touchUpInside" id="tST-ai-SDC"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-nR-6N0">
+                                        <rect key="frame" x="19.999999999999993" y="70" width="122.33333333333331" height="21.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyd-Jh-KwH">
+                                                <rect key="frame" x="0.0" y="0.0" width="122.33333333333333" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgY-Xe-pAx">
+                                        <rect key="frame" x="270" y="25" width="24" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-DC-aoI">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="CancelButton"/>
+                                                <connections>
+                                                    <action selector="cancel:" destination="TXy-w8-LYD" eventType="touchUpInside" id="Cfk-7Z-tPg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFb-Zx-scM">
+                                        <rect key="frame" x="20" y="121.66666666666666" width="269" height="28"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7EH-fU-Jg2" customClass="CustomSegmentControl" customModule="Solve_My_Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="29"/>
+                                                <segments>
+                                                    <segment title="Easy"/>
+                                                    <segment title="Medium"/>
+                                                    <segment title="Hard"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fgY-Xe-pAx" secondAttribute="trailing" constant="20" id="3Bg-Xo-ggt"/>
+                                    <constraint firstAttribute="width" secondItem="WUY-e8-Abi" secondAttribute="height" multiplier="6:8" id="7b4-Np-xtS"/>
+                                    <constraint firstItem="ni3-nR-6N0" firstAttribute="leading" secondItem="WUY-e8-Abi" secondAttribute="leading" constant="20" id="OdU-kJ-f0t"/>
+                                    <constraint firstItem="ni3-nR-6N0" firstAttribute="top" secondItem="WUY-e8-Abi" secondAttribute="top" constant="70" id="Rk7-cc-AXC"/>
+                                    <constraint firstAttribute="trailing" secondItem="BFb-Zx-scM" secondAttribute="trailing" constant="25" id="WYF-II-2W6"/>
+                                    <constraint firstItem="fgY-Xe-pAx" firstAttribute="top" secondItem="WUY-e8-Abi" secondAttribute="top" constant="25" id="XeR-3S-eSy"/>
+                                    <constraint firstItem="BFb-Zx-scM" firstAttribute="leading" secondItem="WUY-e8-Abi" secondAttribute="leading" constant="20" id="YFu-od-ZaC"/>
+                                    <constraint firstItem="c98-37-Mq8" firstAttribute="centerX" secondItem="WUY-e8-Abi" secondAttribute="centerX" id="htr-yr-Jl3"/>
+                                    <constraint firstItem="c98-37-Mq8" firstAttribute="top" secondItem="BFb-Zx-scM" secondAttribute="bottom" constant="100" id="qur-ST-dbG"/>
+                                    <constraint firstItem="BFb-Zx-scM" firstAttribute="top" secondItem="ni3-nR-6N0" secondAttribute="bottom" constant="30" id="s8b-vg-LCR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.70459653253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0rm-eO-j24" firstAttribute="trailing" secondItem="WUY-e8-Abi" secondAttribute="trailing" constant="50" id="5T3-NZ-ou5"/>
+                            <constraint firstItem="WUY-e8-Abi" firstAttribute="top" secondItem="0rm-eO-j24" secondAttribute="top" constant="100" id="Aeu-7h-SEA"/>
+                            <constraint firstItem="WUY-e8-Abi" firstAttribute="leading" secondItem="0rm-eO-j24" secondAttribute="leading" constant="50" id="AjB-d6-L10"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0rm-eO-j24"/>
+                    </view>
+                    <connections>
+                        <outlet property="levelControl" destination="7EH-fU-Jg2" id="kE6-hs-r4p"/>
+                        <outlet property="saveButton" destination="c98-37-Mq8" id="B8v-hR-IVq"/>
+                        <outlet property="settingWindow" destination="WUY-e8-Abi" id="LZz-5h-Es5"/>
+                        <segue destination="sbq-nC-nUC" kind="presentation" identifier="puzzle" id="pQg-DL-c4L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgM-LE-QyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1610.144927536232" y="633.42391304347836"/>
+        </scene>
         <!--Play Sudoku-->
         <scene sceneID="EhD-Gh-P1Z">
             <objects>
-                <viewController id="sbq-nC-nUC" customClass="PuzzleViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="sbq-nC-nUC" customClass="PuzzleViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hm7-M8-JeL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,11 +126,22 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Sudoku" id="55M-xw-d92"/>
+                                    <navigationItem title="Sudoku" id="55M-xw-d92">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="eTI-eO-RKQ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ut6-OU-kPe">
+                                                <rect key="frame" x="20" y="7" width="29" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Settings"/>
+                                                <connections>
+                                                    <action selector="settings:" destination="sbq-nC-nUC" eventType="touchUpInside" id="gYS-oh-bUj"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXN-ea-KLd">
-                                <rect key="frame" x="0.0" y="64" width="414" height="573"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="622"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-49-5IV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -1112,6 +1219,7 @@
                                                         <color key="backgroundColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="sf9-13-4ef" firstAttribute="height" secondItem="Cr6-tH-kbs" secondAttribute="height" id="4VG-A1-gyC"/>
+                                                            <constraint firstItem="sf9-13-4ef" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cr6-tH-kbs" secondAttribute="leading" constant="20" symbolic="YES" id="7na-TK-iGd"/>
                                                             <constraint firstItem="sf9-13-4ef" firstAttribute="top" secondItem="Cr6-tH-kbs" secondAttribute="top" id="K6B-AF-oxG"/>
                                                             <constraint firstAttribute="trailing" secondItem="sf9-13-4ef" secondAttribute="trailing" constant="10" id="yJn-Dm-9yu"/>
                                                         </constraints>
@@ -1158,7 +1266,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9u-eF-eof" customClass="GADBannerView">
-                                <rect key="frame" x="47" y="637" width="320" height="50"/>
+                                <rect key="frame" x="47" y="686" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Rdn-Ig-jqH"/>
@@ -1270,6 +1378,7 @@
                         <outlet property="i6" destination="Daq-QL-RQh" id="Lb8-tS-sIf"/>
                         <outlet property="i7" destination="csz-wO-OoJ" id="NIv-nJ-5lu"/>
                         <outlet property="i8" destination="om6-U9-sSv" id="6Vb-jg-sWn"/>
+                        <outlet property="navigationItemx" destination="55M-xw-d92" id="mbd-2T-74i"/>
                         <outlet property="stack" destination="lDR-mo-lTb" id="YdS-GZ-uGb"/>
                     </connections>
                 </viewController>
@@ -2352,13 +2461,12 @@
                                                     <constraint firstItem="jL5-g0-iZm" firstAttribute="height" secondItem="w4z-ic-Trb" secondAttribute="height" id="zbO-PB-vD0"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-z0-iEV">
-                                                <rect key="frame" x="111.33333333333333" y="408.33333333333331" width="191.33333333333337" height="48"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-z0-iEV">
+                                                <rect key="frame" x="111.33333333333331" y="408.33333333333331" width="192" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4ZN-z0-iEV" secondAttribute="height" multiplier="16:4" priority="900" id="0yH-Nh-dV8"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="j4k-hH-21m"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" backgroundImage="Solution">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -2545,6 +2653,10 @@
     <resources>
         <image name="Button" width="139" height="41"/>
         <image name="CancelButton" width="24" height="24"/>
+        <image name="Settings" width="25" height="25"/>
         <image name="Solution" width="184" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pQg-DL-c4L"/>
+    </inferredMetricsTieBreakers>
 </document>

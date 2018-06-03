@@ -14,16 +14,18 @@ class Puzzle {
     var solver: Solver
     var solvedPuzzle:[[Int]]
     var sudokuBoard:[[SudoKoCellView]] = [[]]
-    
+    let settings: Settings = Settings.getInstance()
+
     init(sudokuBoard:[[SudoKoCellView]]) {
         self.solver = Solver()
         self.solvedPuzzle = solver.createPuzzle()
         self.sudokuBoard = sudokuBoard
     }
     
-    func easy() {
+    func new() {
         var cells = self.getEmptyCells()
-        for _ in 0...PuzzleInput.easy {
+
+        for _ in 0...settings.puzzleSize {
             let randomIndex = arc4random_uniform(UInt32((cells.count)))
             let cell = cells[Int(randomIndex)]
             self.updateThisResult(row: cell.0, column: cell.1,as: .PUZZLE)

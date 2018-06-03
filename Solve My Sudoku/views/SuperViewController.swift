@@ -35,7 +35,7 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showInterstitialAd() {
+    @objc func showInterstitialAd() {
         count += 1
         if count == 3 {
             if interstitial.isReady {
