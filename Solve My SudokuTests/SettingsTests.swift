@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Solve_My_Sudoku
 
 class SettingsTests: XCTestCase {
     
@@ -20,16 +21,39 @@ class SettingsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testChangeDifficultyLevel() {
+        let settings: Settings = Settings.getInstance()
+        XCTAssertEqual(DifficultyLevel.EASY, settings.level)
+        settings.level = DifficultyLevel.MEDIUM
+        XCTAssertEqual(DifficultyLevel.MEDIUM, settings.level)
+        
+        let settingsNew: Settings = Settings.getInstance()
+        XCTAssertEqual(DifficultyLevel.MEDIUM, settingsNew.level)
+        settingsNew.level = DifficultyLevel.HARD
+        
+        XCTAssertEqual(DifficultyLevel.HARD, settings.level)
+
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCheckPuzzleSize() {
+        let settings: Settings = Settings.getInstance()
+        XCTAssertEqual(DifficultyLevel.EASY, settings.level)
+        XCTAssertTrue(settings.puzzleSize >= 28)
+        
+        settings.level = DifficultyLevel.MEDIUM
+        XCTAssertEqual(DifficultyLevel.MEDIUM, settings.level)
+        XCTAssertTrue(settings.puzzleSize >= 22)
+        XCTAssertTrue(settings.puzzleSize < 29)
+
+        let settingsNew: Settings = Settings.getInstance()
+        XCTAssertEqual(DifficultyLevel.MEDIUM, settingsNew.level)
+        settingsNew.level = DifficultyLevel.HARD
+        
+        XCTAssertEqual(DifficultyLevel.HARD, settings.level)
+        XCTAssertTrue(settingsNew.puzzleSize >= 17)
+        XCTAssertTrue(settingsNew.puzzleSize < 23)
+
+
     }
     
 }

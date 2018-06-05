@@ -69,7 +69,7 @@ class SettingsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "puzzle" {
-            let _: PuzzleViewController = segue.destination as! PuzzleViewController
+            let _: CustomTabViewController = segue.destination as! CustomTabViewController
         }
     }
     

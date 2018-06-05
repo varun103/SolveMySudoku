@@ -152,7 +152,6 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         self.viewDidLoad()
     }
     
-    
     @IBAction func getClue(_ sender: Any) {
         let cells = puzzle.getEmptyCells()
         if cells.count > 0 {

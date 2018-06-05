@@ -103,7 +103,7 @@
                         <outlet property="levelControl" destination="7EH-fU-Jg2" id="kE6-hs-r4p"/>
                         <outlet property="saveButton" destination="c98-37-Mq8" id="B8v-hR-IVq"/>
                         <outlet property="settingWindow" destination="WUY-e8-Abi" id="LZz-5h-Es5"/>
-                        <segue destination="sbq-nC-nUC" kind="presentation" identifier="puzzle" id="pQg-DL-c4L"/>
+                        <segue destination="MUL-bG-ypE" kind="presentation" identifier="puzzle" modalTransitionStyle="crossDissolve" id="cZ7-v1-MpG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgM-LE-QyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,11 +137,22 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="6Ze-Co-cGh">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xGm-lG-gcv">
+                                                <rect key="frame" x="356" y="4" width="38" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" backgroundImage="NewButton"/>
+                                                <connections>
+                                                    <action selector="newGame:" destination="sbq-nC-nUC" eventType="touchUpInside" id="1LI-Ue-pU3"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXN-ea-KLd">
-                                <rect key="frame" x="0.0" y="64" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="573"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-49-5IV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -1201,28 +1212,8 @@
                                             <stackView contentMode="left" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-ge-g7A">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-tH-kbs">
+                                                    <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-tH-kbs">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf9-13-4ef">
-                                                                <rect key="frame" x="336" y="0.0" width="68" height="15"/>
-                                                                <color key="backgroundColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                                <state key="normal" title="New Puzzle">
-                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="newGame:" destination="sbq-nC-nUC" eventType="touchUpInside" id="vUR-vY-WIS"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="sf9-13-4ef" firstAttribute="height" secondItem="Cr6-tH-kbs" secondAttribute="height" id="4VG-A1-gyC"/>
-                                                            <constraint firstItem="sf9-13-4ef" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cr6-tH-kbs" secondAttribute="leading" constant="20" symbolic="YES" id="7na-TK-iGd"/>
-                                                            <constraint firstItem="sf9-13-4ef" firstAttribute="top" secondItem="Cr6-tH-kbs" secondAttribute="top" id="K6B-AF-oxG"/>
-                                                            <constraint firstAttribute="trailing" secondItem="sf9-13-4ef" secondAttribute="trailing" constant="10" id="yJn-Dm-9yu"/>
-                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.59607843137254901" green="0.85490196078431369" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1266,7 +1257,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9u-eF-eof" customClass="GADBannerView">
-                                <rect key="frame" x="47" y="686" width="320" height="50"/>
+                                <rect key="frame" x="47" y="637" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Rdn-Ig-jqH"/>
@@ -1386,10 +1377,10 @@
             </objects>
             <point key="canvasLocation" x="-539.13043478260875" y="634.23913043478262"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab View Controller-->
         <scene sceneID="GRL-n2-E4b">
             <objects>
-                <tabBarController id="MUL-bG-ypE" sceneMemberID="viewController">
+                <tabBarController id="MUL-bG-ypE" customClass="CustomTabViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Jl-Js-pJq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2653,10 +2644,8 @@
     <resources>
         <image name="Button" width="139" height="41"/>
         <image name="CancelButton" width="24" height="24"/>
+        <image name="NewButton" width="36" height="34"/>
         <image name="Settings" width="25" height="25"/>
         <image name="Solution" width="184" height="48"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pQg-DL-c4L"/>
-    </inferredMetricsTieBreakers>
 </document>

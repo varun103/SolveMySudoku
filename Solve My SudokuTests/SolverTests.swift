@@ -143,6 +143,8 @@ class SolverTest: XCTestCase {
         for i in 0...1000 {
             var temp:[Int]=[]
             let x = s.createPuzzle()
+            print(i)
+
             if i == 0 {
                 temp = x[1]
             }
