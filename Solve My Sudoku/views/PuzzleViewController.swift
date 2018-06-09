@@ -15,7 +15,9 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     @IBOutlet weak var clueButton: UIButton!
     @IBOutlet weak var adBanner: GADBannerView!
     @IBOutlet weak var navigationItemx: UINavigationItem!
+    @IBOutlet weak var bestTimeLabel: UILabel!
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var a0: SudoKoCellView!
     @IBOutlet weak var a1: SudoKoCellView!
     @IBOutlet weak var a2: SudoKoCellView!
@@ -108,6 +110,9 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
    
     let shapeLayer = CAShapeLayer()
     var puzzle: Puzzle!
+    var timer: Timer!
+    var timeElapsed:Int = 0
+    var puzzleSolved: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,17 +127,21 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
                             [g0,g1,g2,g3,g4,g5,g6,g7,g8],
                             [h0,h1,h2,h3,h4,h5,h6,h7,h8],
                             [i0,i1,i2,i3,i4,i5,i6,i7,i8]]
-        
+
+        self.timeElapsed = 0
+        self.puzzleSolved = false
+        self.timerLabel.text = Utils.dateString(forInterval: self.timeElapsed)
+        self.bestTimeLabel.text = "Best: " + Utils.dateString(forInterval: Settings.getInstance().bestTime)
         puzzle = Puzzle(sudokuBoard: self.sudokuBoard)
         puzzle.new()
-        
         
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
         adBanner.delegate = self
         adBanner.adUnitID = Configuration.bannerAdUnit
         adBanner.rootViewController = self
-        adBanner.load(request)
+        //adBanner.load(request)
+    
     }
     
     // clear out everything except the puzzle
@@ -158,9 +167,11 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
             let randomIndex = arc4random_uniform(UInt32((cells.count)))
             let cell = cells[Int(randomIndex)]
             self.puzzle.updateThisResult(row: cell.0, column: cell.1, as: .CLUE)
+            self.addTimePenalty()
         }
         showInterstitialAd()
     }
+    
     
     @IBAction func check(_ sender: Any) {
         var incorrectAnswers:[(Int,Int)] = []
@@ -181,6 +192,7 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         
         if incorrectAnswers.count > 0 {
             showInterstitialAd()
+            self.addTimePenalty()
             for inc in incorrectAnswers {
                 self.sudokuBoard[inc.0][inc.1].type = .ERROR
             }
@@ -189,7 +201,14 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         }
         
         if emptyCells.count == 0 {
-            self.showAlert(title: "CONGRATULATIONS!!", message: "You've solved the puzzle", actionMessage: "Done")
+            let timeTakenInSec = self.timeElapsed
+            let timeTaken = Utils.dateString(forInterval: timeTakenInSec)
+            if (Settings.getInstance().bestTime > timeTakenInSec || Settings.getInstance().bestTime == 0) {
+                Settings.getInstance().bestTime = timeTakenInSec
+                self.showAlert(title: "NEW BEST TIME!", message: "You've solved the puzzle in " + timeTaken, actionMessage: "Done")
+            }
+            self.showAlert(title: "CONGRATULATIONS!", message: "You've solved the puzzle in " + timeTaken, actionMessage: "Done")
+            self.puzzleSolved = true
             return
         } else {
             showInterstitialAd()
@@ -207,6 +226,13 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         popUpVc.didMove(toParentViewController: self)
     }
     
+    @objc func start() {
+        if !self.puzzleSolved {
+            self.timeElapsed = self.timeElapsed + 1
+            self.timerLabel.text = Utils.dateString(forInterval: timeElapsed)
+            self.timerLabel.textColor = UIColor(red: 121/255, green:121/255 , blue: 121/255, alpha: 100)
+        }
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -243,5 +269,21 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         self.sudokuBoard.joined().forEach { cell in
             cell.adjustFont()
         }
+    }
+    
+    private func addTimePenalty() {
+        self.timerLabel.textColor = UIColor.red
+        self.timeElapsed = Settings.getInstance().timePenalty + self.timeElapsed
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1,  repeats: true) {
+            [weak self] timer in
+            self?.start()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.timer.invalidate()
     }
 }
