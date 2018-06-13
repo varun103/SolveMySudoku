@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgM-LE-QyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1610.144927536232" y="633.42391304347836"/>
+            <point key="canvasLocation" x="-2191" y="325"/>
         </scene>
         <!--Play Sudoku-->
         <scene sceneID="EhD-Gh-P1Z">
@@ -1386,7 +1386,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQ7-ta-Xpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539.13043478260875" y="634.23913043478262"/>
+            <point key="canvasLocation" x="-655" y="871"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="8ZO-2u-NSX">
+            <objects>
+                <viewController storyboardIdentifier="help" id="hvf-7d-f3A" customClass="HelpViewController" customModule="Solve_My_Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAh-q4-MRH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAB-Ie-tEs">
+                                <rect key="frame" x="40" y="120" width="334" height="400"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter any Sudoku puzzle and click &quot;Solution&quot; to view its solution." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GGs-Ce-txy">
+                                        <rect key="frame" x="25" y="36" width="283" height="344"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecY-eH-CO0">
+                                        <rect key="frame" x="285" y="10" width="24" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEJ-K8-blk">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <state key="normal" backgroundImage="CancelButton"/>
+                                                <connections>
+                                                    <action selector="exit:" destination="hvf-7d-f3A" eventType="touchUpInside" id="Yvq-Vb-EVW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GGs-Ce-txy" secondAttribute="bottom" constant="20" id="MQ9-Gf-fYM"/>
+                                    <constraint firstItem="GGs-Ce-txy" firstAttribute="top" secondItem="ZEJ-K8-blk" secondAttribute="bottom" constant="2" id="V4U-Fh-YlS"/>
+                                    <constraint firstItem="GGs-Ce-txy" firstAttribute="leading" secondItem="RAB-Ie-tEs" secondAttribute="leading" constant="25" id="WN0-0F-CEm"/>
+                                    <constraint firstItem="ecY-eH-CO0" firstAttribute="top" secondItem="RAB-Ie-tEs" secondAttribute="top" constant="10" id="Zxd-2s-ToI"/>
+                                    <constraint firstAttribute="trailing" secondItem="GGs-Ce-txy" secondAttribute="trailing" constant="26" id="rR3-43-w2s"/>
+                                    <constraint firstAttribute="trailing" secondItem="ecY-eH-CO0" secondAttribute="trailing" constant="25" id="yeG-zp-rtN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RAB-Ie-tEs" firstAttribute="top" secondItem="FdA-LL-bkV" secondAttribute="top" constant="100" id="18R-p1-0Uo"/>
+                            <constraint firstItem="RAB-Ie-tEs" firstAttribute="centerY" secondItem="zAh-q4-MRH" secondAttribute="centerY" constant="-48" id="DKH-ZS-uWz"/>
+                            <constraint firstItem="FdA-LL-bkV" firstAttribute="trailing" secondItem="RAB-Ie-tEs" secondAttribute="trailing" constant="40" id="oe8-4A-zkb"/>
+                            <constraint firstItem="RAB-Ie-tEs" firstAttribute="leading" secondItem="FdA-LL-bkV" secondAttribute="leading" constant="40" id="sVA-lE-q3z"/>
+                            <constraint firstItem="RAB-Ie-tEs" firstAttribute="centerX" secondItem="zAh-q4-MRH" secondAttribute="centerX" id="tiB-lY-rIh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FdA-LL-bkV"/>
+                    </view>
+                    <connections>
+                        <outlet property="embeddedView" destination="RAB-Ie-tEs" id="MoN-8a-Ksl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1U-cm-voM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-823.1884057971015" y="-840.48913043478262"/>
         </scene>
         <!--Custom Tab View Controller-->
         <scene sceneID="GRL-n2-E4b">
@@ -2477,7 +2537,7 @@
                                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ft-Wv-mG6"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-6t-3UH">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEq-6t-3UH">
                                                 <rect key="frame" x="20" y="14.999999999999998" width="374" height="19.333333333333329"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-bB-YQ1">
@@ -2494,14 +2554,27 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUQ-8e-dxw">
-                                                        <rect key="frame" x="297.33333333333331" y="0.0" width="76.666666666666686" height="19.333333333333332"/>
+                                                        <rect key="frame" x="277.33333333333331" y="0.0" width="76.666666666666686" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="11"/>
                                                         <state key="normal" title="Clue"/>
                                                         <connections>
                                                             <action selector="hint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9j-G0-Cjy"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbQ-pW-bgz">
+                                                        <rect key="frame" x="354" y="0.0" width="20" height="19.333333333333332"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="QbQ-pW-bgz" secondAttribute="height" multiplier="1:1" id="GGS-wc-FGm"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="Help"/>
+                                                        <connections>
+                                                            <action selector="help:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEa-sd-vxS"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="QbQ-pW-bgz" firstAttribute="leading" secondItem="mUQ-8e-dxw" secondAttribute="trailing" id="pJZ-Bo-3q4"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2535,7 +2608,7 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Enter the Puzzle" id="uLG-AM-RpL"/>
+                                    <navigationItem title="Enter any Puzzle" id="uLG-AM-RpL"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -2649,12 +2722,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="131.25"/>
+            <point key="canvasLocation" x="84" y="566"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button" width="139" height="41"/>
         <image name="CancelButton" width="24" height="24"/>
+        <image name="Help" width="20" height="20"/>
         <image name="NewButton" width="36" height="34"/>
         <image name="Settings" width="25" height="25"/>
         <image name="Solution" width="184" height="48"/>

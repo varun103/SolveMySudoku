@@ -140,7 +140,9 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         adBanner.delegate = self
         adBanner.adUnitID = Configuration.bannerAdUnit
         adBanner.rootViewController = self
-        //adBanner.load(request)
+        adBanner.load(request)
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(self.checkIfPuzzleSolved) , name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     
     }
     
@@ -170,8 +172,15 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
             self.addTimePenalty()
         }
         showInterstitialAd()
+        checkIfPuzzleSolved()
     }
     
+    @objc func checkIfPuzzleSolved(){
+        if self.puzzle.getEmptyCells().count == 0 {
+            self.check(self)
+        }
+    }
+
     
     @IBAction func check(_ sender: Any) {
         var incorrectAnswers:[(Int,Int)] = []
@@ -203,15 +212,20 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         if emptyCells.count == 0 {
             let timeTakenInSec = self.timeElapsed
             let timeTaken = Utils.dateString(forInterval: timeTakenInSec)
+            for cell in self.sudokuBoard.joined() {
+                UIView.animate(withDuration: 2) {
+                    cell.textColor = TextColors.correct
+                }
+            }
             if (Settings.getInstance().bestTime > timeTakenInSec || Settings.getInstance().bestTime == 0) {
                 Settings.getInstance().bestTime = timeTakenInSec
-                self.showAlert(title: "NEW BEST TIME!", message: "You've solved the puzzle in " + timeTaken, actionMessage: "Done")
+                self.newGameAlert(title: "NEW BEST TIME!", message: "You've solved the puzzle in " + timeTaken, otherActionMessage:"Done")
             }
-            self.showAlert(title: "CONGRATULATIONS!", message: "You've solved the puzzle in " + timeTaken, actionMessage: "Done")
+            self.newGameAlert(title: "CONGRATULATIONS!", message: "You've solved the puzzle in " + timeTaken, otherActionMessage: "Done")
             self.puzzleSolved = true
             return
         } else {
-            showInterstitialAd()
+            //showInterstitialAd()
             self.showAlert(title: "Good so far", message: "Complete the rest of the puzzle", actionMessage: "Done")
             return
         }
@@ -285,5 +299,14 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.timer.invalidate()
+    }
+    
+    func newGameAlert(title: String, message: String, otherActionMessage: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: otherActionMessage, style: .default, handler: { _ in
+        }) )
+        alert.addAction(UIAlertAction(title: "New Game", style: .default, handler: { _ in
+            self.newGame(self) }) )
+        self.present(alert, animated: true, completion: nil)
     }
 }

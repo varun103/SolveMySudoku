@@ -161,6 +161,14 @@ class ViewController: SuperViewController, GADBannerViewDelegate {
         self.showInterstitialAd()
     }
     
+    @IBAction func help(_ sender: Any) {
+        let popUpVc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "help") as! HelpViewController
+        self.addChildViewController(popUpVc)
+        popUpVc.view.frame = self.view.frame
+        self.view.addSubview(popUpVc.view)
+        popUpVc.didMove(toParentViewController: self)
+    }
+    
     @IBAction func calculate(_ sender: Any) {
         self.view.endEditing(false)
         self.solverService = SolverService(userInput: self.sudokuBoard)

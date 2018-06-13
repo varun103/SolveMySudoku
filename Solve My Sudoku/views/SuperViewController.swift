@@ -27,6 +27,8 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
             self?.interstitial = self?.createAndLoadInterstitial()
         }
     }
+    
+    
 
     func showAlert(title: String, message: String, actionMessage: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -39,7 +41,7 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
         count += 1
         if count == 3 {
             if interstitial.isReady {
-                //interstitial.present(fromRootViewController: self)
+                interstitial.present(fromRootViewController: self)
                 count = 0
             }
         }

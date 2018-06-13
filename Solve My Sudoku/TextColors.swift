@@ -15,7 +15,7 @@ struct TextColors {
     //static let solution = UIColor(red: 109/255, green: 146/255, blue: 155/255, alpha: 100)
     static let solution = UIColor(red: 0/255, green: 63/255, blue: 190/255, alpha: 100)
 
-
+    static let correct = UIColor(red: 95/255, green: 168/255, blue:116/255, alpha: 100)
 }
 
 struct TextFont {
