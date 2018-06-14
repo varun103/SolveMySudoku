@@ -21,7 +21,13 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     
     let backgroundImage = "Rectangle"
     let backgroundImageGrey = "Rectangle_grey"
+    
+    // Cannot be edited by user
+    // This is for the puzzle cells
     var locked = false
+    
+    var placeHolderBackgroundColor: UIColor!
+    
     var type: CellType = .EMPTY {
         didSet {
             if type == CellType.ANSWER {
@@ -138,20 +144,32 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let x = textField.text?.lengthOfBytes(using: String.Encoding.utf8) {
             if (x >= 1) {
+                
                 if (self.locked) {
                     return false
                 }
-                if (string == ""){
-                    self.reset()
-                    return true
-                }
-                return false
+                // If user tries to type another digit
+                // then erase the first one and take on the new one
+                self.reset()
+                return true
             }
         }
         if string == "0" {
             return false
         }
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.placeHolderBackgroundColor = self.backgroundColor
+        if !self.locked {
+            self.tintColor = UIColor.clear
+            self.backgroundColor = BackgroundColors.selectedCell
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.backgroundColor = self.placeHolderBackgroundColor
     }
     
     @objc func doneEditing() {

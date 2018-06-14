@@ -19,6 +19,7 @@
 		5570766C20C32B63003F67AF /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570766B20C32B63003F67AF /* CustomSegmentControl.swift */; };
 		5570766E20C68AA7003F67AF /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570766D20C68AA7003F67AF /* CustomTabViewController.swift */; };
 		5573305420CFBCFC00132F51 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573305320CFBCFC00132F51 /* HelpViewController.swift */; };
+		5573305620D2316D00132F51 /* BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573305520D2316D00132F51 /* BackgroundColors.swift */; };
 		558626AF20CA125B006D7C45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558626AE20CA125B006D7C45 /* Utils.swift */; };
 		558B65C92060B213008DA38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65C82060B213008DA38E /* AppDelegate.swift */; };
 		558B65CB2060B213008DA38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65CA2060B213008DA38E /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 		5570766B20C32B63003F67AF /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
 		5570766D20C68AA7003F67AF /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
 		5573305320CFBCFC00132F51 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		5573305520D2316D00132F51 /* BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColors.swift; sourceTree = "<group>"; };
 		558626AE20CA125B006D7C45 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		558B65C52060B213008DA38E /* Solve My Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solve My Sudoku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558B65C82060B213008DA38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				5570766720C28CF4003F67AF /* Settings.swift */,
 				5570766620C28CBE003F67AF /* views */,
 				558626AE20CA125B006D7C45 /* Utils.swift */,
+				5573305520D2316D00132F51 /* BackgroundColors.swift */,
 			);
 			path = "Solve My Sudoku";
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				5570766E20C68AA7003F67AF /* CustomTabViewController.swift in Sources */,
 				5570766C20C32B63003F67AF /* CustomSegmentControl.swift in Sources */,
 				55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */,
+				5573305620D2316D00132F51 /* BackgroundColors.swift in Sources */,
 				5573305420CFBCFC00132F51 /* HelpViewController.swift in Sources */,
 				5540E10620B813230059CEED /* PuzzleService.swift in Sources */,
 				5570766320C11FD1003F67AF /* SettingsViewController.swift in Sources */,
