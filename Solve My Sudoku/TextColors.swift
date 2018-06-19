@@ -16,6 +16,8 @@ struct TextColors {
     static let solution = UIColor(red: 0/255, green: 63/255, blue: 190/255, alpha: 100)
 
     static let correct = UIColor(red: 95/255, green: 168/255, blue:116/255, alpha: 100)
+    
+    static let notifications = UIColor(red: 125/255, green: 156/255, blue: 159/255, alpha: 100)
 }
 
 struct TextFont {
@@ -25,4 +27,6 @@ struct TextFont {
     static let avenirDemiBold = "AvenirNext-DemiBold"
     static let hintButton = "ChalkboardSE-Bold"
     static let userInput = "ChalkboardSE-Light"
+
+    static let notifications = "HelveticaNeue-Medium"
 }

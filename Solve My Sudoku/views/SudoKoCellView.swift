@@ -95,6 +95,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     func reset() {
         //self.type = .EMPTY
         self.background = UIImage(named: self.backgroundImage)!
+        self.backgroundColor = UIColor.clear
         self.placeholder = ""
         self.text = ""
         if self.type == .ERROR || self.type == .ANSWER || self.type == .CLUE {
@@ -142,6 +143,9 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
     /// Prevents user from entering more than one value
     /// Also prevents from entering the digit 0
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "0" {
+            return false
+        }
         if let x = textField.text?.lengthOfBytes(using: String.Encoding.utf8) {
             if (x >= 1) {
                 
@@ -154,9 +158,7 @@ class SudoKoCellView: UITextField, UITextFieldDelegate {
                 return true
             }
         }
-        if string == "0" {
-            return false
-        }
+        
         return true
     }
     

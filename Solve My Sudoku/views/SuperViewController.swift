@@ -16,7 +16,6 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
     var interstitial: GADInterstitial!
     var count: Int = 0
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let x = UIColor(red: 152.0/255.0, green: 218.0/255.0, blue: 252.0/255.0, alpha: 82.0)
@@ -27,8 +26,6 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
             self?.interstitial = self?.createAndLoadInterstitial()
         }
     }
-    
-    
 
     func showAlert(title: String, message: String, actionMessage: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -39,7 +36,7 @@ class SuperViewController: UIViewController, GADInterstitialDelegate {
     
     @objc func showInterstitialAd() {
         count += 1
-        if count == 3 {
+        if count == 5 {
             if interstitial.isReady {
                 interstitial.present(fromRootViewController: self)
                 count = 0

@@ -36,7 +36,7 @@ enum DifficultyLevel: String {
         case .EASY:
             return 60
         case .MEDIUM:
-            return 95
+            return 90
         case .HARD:
             return 120
         default:

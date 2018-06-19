@@ -20,6 +20,7 @@
 		5570766E20C68AA7003F67AF /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570766D20C68AA7003F67AF /* CustomTabViewController.swift */; };
 		5573305420CFBCFC00132F51 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573305320CFBCFC00132F51 /* HelpViewController.swift */; };
 		5573305620D2316D00132F51 /* BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573305520D2316D00132F51 /* BackgroundColors.swift */; };
+		5573305820D6FE3600132F51 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573305720D6FE3600132F51 /* Achievement.swift */; };
 		558626AF20CA125B006D7C45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558626AE20CA125B006D7C45 /* Utils.swift */; };
 		558B65C92060B213008DA38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65C82060B213008DA38E /* AppDelegate.swift */; };
 		558B65CB2060B213008DA38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B65CA2060B213008DA38E /* ViewController.swift */; };
@@ -33,6 +34,8 @@
 		55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A12094F88600EA543A /* SudoKoCellView.swift */; };
 		55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A360A320966E3F00EA543A /* SudokuRowStackView.swift */; };
 		55E1D2ED20C8F8AB00FF2690 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E1D2EC20C8F8AB00FF2690 /* GoogleService-Info.plist */; };
+		55E1DE2620D8ED3E00C6DC55 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1DE2520D8ED3E00C6DC55 /* Events.swift */; };
+		55F508BD20D8DBA20006A7A3 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F508BC20D8DBA20006A7A3 /* Metrics.swift */; };
 		6E079258E93B93FF43B1A1E4 /* libPods-Solve My Sudoku.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,7 @@
 		5570766D20C68AA7003F67AF /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
 		5573305320CFBCFC00132F51 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		5573305520D2316D00132F51 /* BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColors.swift; sourceTree = "<group>"; };
+		5573305720D6FE3600132F51 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		558626AE20CA125B006D7C45 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		558B65C52060B213008DA38E /* Solve My Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solve My Sudoku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558B65C82060B213008DA38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		55A360A12094F88600EA543A /* SudoKoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudoKoCellView.swift; sourceTree = "<group>"; };
 		55A360A320966E3F00EA543A /* SudokuRowStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuRowStackView.swift; sourceTree = "<group>"; };
 		55E1D2EC20C8F8AB00FF2690 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55E1DE2520D8ED3E00C6DC55 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		55F508BC20D8DBA20006A7A3 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Solve My Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB32AD45917940277F94DAB /* Pods-Solve My Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solve My Sudoku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Solve My Sudoku/Pods-Solve My Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
 		A53EF1EC5C448BF190597C6E /* Pods-Solve My Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solve My Sudoku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Solve My Sudoku/Pods-Solve My Sudoku.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +188,9 @@
 				5570766620C28CBE003F67AF /* views */,
 				558626AE20CA125B006D7C45 /* Utils.swift */,
 				5573305520D2316D00132F51 /* BackgroundColors.swift */,
+				5573305720D6FE3600132F51 /* Achievement.swift */,
+				55F508BC20D8DBA20006A7A3 /* Metrics.swift */,
+				55E1DE2520D8ED3E00C6DC55 /* Events.swift */,
 			);
 			path = "Solve My Sudoku";
 			sourceTree = "<group>";
@@ -375,12 +384,15 @@
 				5540E10020B68ACB0059CEED /* PuzzleViewController.swift in Sources */,
 				5540E10220B691A10059CEED /* SuperViewController.swift in Sources */,
 				5540E0FE20B4E9940059CEED /* TextColors.swift in Sources */,
+				55F508BD20D8DBA20006A7A3 /* Metrics.swift in Sources */,
 				5570766820C28CF4003F67AF /* Settings.swift in Sources */,
 				558B65D12060B213008DA38E /* Solve_My_Sudoku.xcdatamodeld in Sources */,
 				558B65CB2060B213008DA38E /* ViewController.swift in Sources */,
 				558B65C92060B213008DA38E /* AppDelegate.swift in Sources */,
 				55A360A22094F88600EA543A /* SudoKoCellView.swift in Sources */,
+				5573305820D6FE3600132F51 /* Achievement.swift in Sources */,
 				558626AF20CA125B006D7C45 /* Utils.swift in Sources */,
+				55E1DE2620D8ED3E00C6DC55 /* Events.swift in Sources */,
 				5570766E20C68AA7003F67AF /* CustomTabViewController.swift in Sources */,
 				5570766C20C32B63003F67AF /* CustomSegmentControl.swift in Sources */,
 				55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */,
