@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		075CF59846013F56C9CA4BDB3A22E36E /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 55AF0503EFB83ECC45CF3FFE2C8EB179 /* pb_encode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0E141C74A418FA386185B4A03D64E8FD /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = B7EA6FD2C267817BBAAB43215B17C5CD /* pb_decode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1C5C6C1F1BA5B612E8494A9C7079A8FE /* Pods-Solve My Sudoku-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A62C557AF98A770CC2425274ED3C110A /* Pods-Solve My Sudoku-dummy.m */; };
+		1C5C6C1F1BA5B612E8494A9C7079A8FE /* Pods-Solve My Sudoku-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8339892200E8CCBA01D3DA89C8224367 /* Pods-Solve My Sudoku-dummy.m */; };
 		27D60989850ED52DB0BE44EE9459916B /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = F7174B51F81D13EE5F0B92027ADB7214 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2F19CBBFE4EF994B8D29C8ED490A6FD6 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF1B4CEB4732FF97896CD693F2EE6B /* GoogleToolboxForMac-dummy.m */; };
 		32CF191A05E37093B52887EFC46F967A /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 94A67F8259EBE13E58B262EF3999E166 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
@@ -20,6 +20,7 @@
 		C5ACCA8335C6609791A88961579645C9 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 496E87FE3270EB807861A6E5BF273431 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		E431F3F0DB9F1FF901ACF9137EBF9FF2 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C3B0122BF880AC8B12763402A60193 /* nanopb-dummy.m */; };
 		FA011CEB4806E32E776FA74AB4D17204 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 528A9F88FCB49798C0DB1E8994C82518 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB438ECF2153D6AD66C7B3875C385013 /* Pods-Solve My SudokuTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 482335C0D0B8A854E0C06A60D623F117 /* Pods-Solve My SudokuTests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +38,41 @@
 			remoteGlobalIDString = B47E3B3F829348F63D242EBC298CA5E8;
 			remoteInfo = GoogleToolboxForMac;
 		};
+		9A43890856A302E2FB383C7A8BE2424A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 382E2C07D8E452314F90C77F40311E19;
+			remoteInfo = nanopb;
+		};
+		CDB028DCD57444E9EB80053F83331226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B47E3B3F829348F63D242EBC298CA5E8;
+			remoteInfo = GoogleToolboxForMac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00C3B0122BF880AC8B12763402A60193 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		02A028161B7A57962FAE66CBE53F25C6 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		0C4830DE70950AAD7C08CBCF30D2489C /* Pods-Solve My Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
+		041629032DCBBB5BCAD95521C80CCA36 /* Pods-Solve My Sudoku-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My Sudoku-frameworks.sh"; sourceTree = "<group>"; };
+		06B233DC11FA2CB73250812085C926A1 /* Pods-Solve My SudokuTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Solve My SudokuTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1035CDE8C935F2B665289272E43B10FB /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		13ABE51AA0599E916EA132E658F7D74E /* Pods-Solve My Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
+		21968DB0F0AF9EADBD98671019D3E530 /* Pods-Solve My SudokuTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My SudokuTests-resources.sh"; sourceTree = "<group>"; };
+		223E387468670E060B49D61BB6FEDD7C /* Pods-Solve My SudokuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My SudokuTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A68175FEB5CD68FD72D95F7A1A00B36 /* Pods-Solve My Sudoku-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My Sudoku-resources.sh"; sourceTree = "<group>"; };
 		30EBA011ED42D857A1BD17520BA6F544 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		381DD297C6569B17C26D1F7A70BFF095 /* libPods-Solve My SudokuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Solve My SudokuTests.a"; path = "libPods-Solve My SudokuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B80875DF292A9AA3C0E3942FB8F5888 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		41D4C09B305242A72D3D924772E7AFC2 /* libPods-Solve My Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Solve My Sudoku.a"; path = "libPods-Solve My Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D3DFCE99DBFA7F63C8B38FB7F69D5F8 /* Pods-Solve My SudokuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My SudokuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4617ACD2761682DD27F1A96C17D1141D /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		482335C0D0B8A854E0C06A60D623F117 /* Pods-Solve My SudokuTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Solve My SudokuTests-dummy.m"; sourceTree = "<group>"; };
 		496E87FE3270EB807861A6E5BF273431 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
 		4B763104F3576BB8E8970AAF2E617D97 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		50A9B41DA1C8B62FFA73F3B240B85949 /* Pods-Solve My Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My Sudoku.release.xcconfig"; sourceTree = "<group>"; };
 		528A9F88FCB49798C0DB1E8994C82518 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		533323F4F84F7942766563D6D88A1800 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		55AF0503EFB83ECC45CF3FFE2C8EB179 /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
@@ -56,23 +80,22 @@
 		63E48E28640DFEB040E7D6B53FF6F9C5 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		6C61562489487511F5378AF83674465E /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
 		6DEF1B4CEB4732FF97896CD693F2EE6B /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		7BAB60B5E92C5D87C786434307D3AC24 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9E1E910A764506E0FBB4BAA1A5F5F6 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
-		89A1E1DB8097733DEBEAD3EDA16267A6 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8339892200E8CCBA01D3DA89C8224367 /* Pods-Solve My Sudoku-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Solve My Sudoku-dummy.m"; sourceTree = "<group>"; };
+		917477DC6997993A72DD3048E03A220A /* Pods-Solve My SudokuTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Solve My SudokuTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9437C7AB9F35BE9F8FAF26C86643DD7A /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
 		94A67F8259EBE13E58B262EF3999E166 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		9E747993353A5CB1F2B3369CA7AF5D7B /* Pods-Solve My Sudoku-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My Sudoku-frameworks.sh"; sourceTree = "<group>"; };
-		A62C557AF98A770CC2425274ED3C110A /* Pods-Solve My Sudoku-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Solve My Sudoku-dummy.m"; sourceTree = "<group>"; };
+		99623B06620FB72448D41DE32B3D7334 /* Pods-Solve My Sudoku-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Solve My Sudoku-acknowledgements.plist"; sourceTree = "<group>"; };
+		9AF3BBE84E753BF114242B2B4877266E /* Pods-Solve My SudokuTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My SudokuTests-frameworks.sh"; sourceTree = "<group>"; };
 		B67A2DAEE333C76E961248BC004835EE /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		B6A977B029B68326E25643C0EC7DA5DB /* libPods-Solve My Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Solve My Sudoku.a"; path = "libPods-Solve My Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EA6FD2C267817BBAAB43215B17C5CD /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		C06718B92649A11A4DD2E1700F19544D /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
-		C70ABEC3F6497A59D4CF8237BD4F2FC7 /* Pods-Solve My Sudoku-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Solve My Sudoku-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D16AE55BE4950C59376FE485E0E8DCA1 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		D24BC2E9D50CDCFF22A6A78A41D724DF /* Pods-Solve My Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Solve My Sudoku.release.xcconfig"; sourceTree = "<group>"; };
-		DDFFDF04377A218C4FE60570AE72AEA2 /* Pods-Solve My Sudoku-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Solve My Sudoku-acknowledgements.plist"; sourceTree = "<group>"; };
-		DF6A0648A1C769D052AE8AC3CC333989 /* Pods-Solve My Sudoku-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Solve My Sudoku-resources.sh"; sourceTree = "<group>"; };
+		DBA5095FE5B7429370221C7291DB79E6 /* Pods-Solve My Sudoku-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Solve My Sudoku-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F7174B51F81D13EE5F0B92027ADB7214 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		FC4CAB238A742E07B1CDB2FB73905946 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFAC84F2A9278F732CB870FD3BE7A96 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +108,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		266A0A1F36C83F0B51F38AA90252A491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E329E76E2A5A01F22DC29F9CDF77889 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,16 +179,6 @@
 			name = decode;
 			sourceTree = "<group>";
 		};
-		43B8E88839C8AD6DCE9CDEE84ADF5EAE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7BAB60B5E92C5D87C786434307D3AC24 /* libGoogleToolboxForMac.a */,
-				89A1E1DB8097733DEBEAD3EDA16267A6 /* libnanopb.a */,
-				41D4C09B305242A72D3D924772E7AFC2 /* libPods-Solve My Sudoku.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		49546B3C0430F24EB46EA6EBF5AC2C0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,14 +224,38 @@
 			path = nanopb;
 			sourceTree = "<group>";
 		};
+		6DED6273AF721B285E9E33B526E932DB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				796A2ACDB06F82CA716166889AF3172C /* Pods-Solve My Sudoku */,
+				A72D172AE439E5D861BA5E5FD907AB66 /* Pods-Solve My SudokuTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		796A2ACDB06F82CA716166889AF3172C /* Pods-Solve My Sudoku */ = {
+			isa = PBXGroup;
+			children = (
+				DBA5095FE5B7429370221C7291DB79E6 /* Pods-Solve My Sudoku-acknowledgements.markdown */,
+				99623B06620FB72448D41DE32B3D7334 /* Pods-Solve My Sudoku-acknowledgements.plist */,
+				8339892200E8CCBA01D3DA89C8224367 /* Pods-Solve My Sudoku-dummy.m */,
+				041629032DCBBB5BCAD95521C80CCA36 /* Pods-Solve My Sudoku-frameworks.sh */,
+				2A68175FEB5CD68FD72D95F7A1A00B36 /* Pods-Solve My Sudoku-resources.sh */,
+				13ABE51AA0599E916EA132E658F7D74E /* Pods-Solve My Sudoku.debug.xcconfig */,
+				50A9B41DA1C8B62FFA73F3B240B85949 /* Pods-Solve My Sudoku.release.xcconfig */,
+			);
+			name = "Pods-Solve My Sudoku";
+			path = "Target Support Files/Pods-Solve My Sudoku";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
 				F8BFBAD4B621A4FD10F39A0106589698 /* Pods */,
-				43B8E88839C8AD6DCE9CDEE84ADF5EAE /* Products */,
-				ACC3DD6133197F79F5A9BD86302DF53E /* Targets Support Files */,
+				C81A58301E8B9FDB18943F84B16AFD47 /* Products */,
+				6DED6273AF721B285E9E33B526E932DB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +287,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A72D172AE439E5D861BA5E5FD907AB66 /* Pods-Solve My SudokuTests */ = {
+			isa = PBXGroup;
+			children = (
+				917477DC6997993A72DD3048E03A220A /* Pods-Solve My SudokuTests-acknowledgements.markdown */,
+				06B233DC11FA2CB73250812085C926A1 /* Pods-Solve My SudokuTests-acknowledgements.plist */,
+				482335C0D0B8A854E0C06A60D623F117 /* Pods-Solve My SudokuTests-dummy.m */,
+				9AF3BBE84E753BF114242B2B4877266E /* Pods-Solve My SudokuTests-frameworks.sh */,
+				21968DB0F0AF9EADBD98671019D3E530 /* Pods-Solve My SudokuTests-resources.sh */,
+				3D3DFCE99DBFA7F63C8B38FB7F69D5F8 /* Pods-Solve My SudokuTests.debug.xcconfig */,
+				223E387468670E060B49D61BB6FEDD7C /* Pods-Solve My SudokuTests.release.xcconfig */,
+			);
+			name = "Pods-Solve My SudokuTests";
+			path = "Target Support Files/Pods-Solve My SudokuTests";
+			sourceTree = "<group>";
+		};
 		A86553EF365F4C1ADA6257F71C0ECF57 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,14 +311,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GoogleToolboxForMac";
-			sourceTree = "<group>";
-		};
-		ACC3DD6133197F79F5A9BD86302DF53E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C63177A34023F6FE0D292B0A35914513 /* Pods-Solve My Sudoku */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		ADE1BEB2AA72C42616C6155EC0237D84 /* encode */ = {
@@ -289,19 +340,15 @@
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
-		C63177A34023F6FE0D292B0A35914513 /* Pods-Solve My Sudoku */ = {
+		C81A58301E8B9FDB18943F84B16AFD47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C70ABEC3F6497A59D4CF8237BD4F2FC7 /* Pods-Solve My Sudoku-acknowledgements.markdown */,
-				DDFFDF04377A218C4FE60570AE72AEA2 /* Pods-Solve My Sudoku-acknowledgements.plist */,
-				A62C557AF98A770CC2425274ED3C110A /* Pods-Solve My Sudoku-dummy.m */,
-				9E747993353A5CB1F2B3369CA7AF5D7B /* Pods-Solve My Sudoku-frameworks.sh */,
-				DF6A0648A1C769D052AE8AC3CC333989 /* Pods-Solve My Sudoku-resources.sh */,
-				0C4830DE70950AAD7C08CBCF30D2489C /* Pods-Solve My Sudoku.debug.xcconfig */,
-				D24BC2E9D50CDCFF22A6A78A41D724DF /* Pods-Solve My Sudoku.release.xcconfig */,
+				FC4CAB238A742E07B1CDB2FB73905946 /* libGoogleToolboxForMac.a */,
+				4617ACD2761682DD27F1A96C17D1141D /* libnanopb.a */,
+				B6A977B029B68326E25643C0EC7DA5DB /* libPods-Solve My Sudoku.a */,
+				381DD297C6569B17C26D1F7A70BFF095 /* libPods-Solve My SudokuTests.a */,
 			);
-			name = "Pods-Solve My Sudoku";
-			path = "Target Support Files/Pods-Solve My Sudoku";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CAD1CC701FF572DC793FC854ED47AE77 /* FirebaseCore */ = {
@@ -361,6 +408,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		16B759A17FCDDB9B9D0DCE63ED438FBA /* Pods-Solve My SudokuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82BF21D8BEEAA1663D08FCC6217C5990 /* Build configuration list for PBXNativeTarget "Pods-Solve My SudokuTests" */;
+			buildPhases = (
+				1E646AB69F025048036E092172EE0AF2 /* Sources */,
+				9E329E76E2A5A01F22DC29F9CDF77889 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBEA01682DF0E6ABEB995C36E90A4391 /* PBXTargetDependency */,
+				4A7C40A4C742317C20C3D73FB96C9763 /* PBXTargetDependency */,
+			);
+			name = "Pods-Solve My SudokuTests";
+			productName = "Pods-Solve My SudokuTests";
+			productReference = 381DD297C6569B17C26D1F7A70BFF095 /* libPods-Solve My SudokuTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		382E2C07D8E452314F90C77F40311E19 /* nanopb */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2A84379D6129D480C650B9491B10ABE /* Build configuration list for PBXNativeTarget "nanopb" */;
@@ -375,7 +440,7 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = 89A1E1DB8097733DEBEAD3EDA16267A6 /* libnanopb.a */;
+			productReference = 4617ACD2761682DD27F1A96C17D1141D /* libnanopb.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B47E3B3F829348F63D242EBC298CA5E8 /* GoogleToolboxForMac */ = {
@@ -392,7 +457,7 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = 7BAB60B5E92C5D87C786434307D3AC24 /* libGoogleToolboxForMac.a */;
+			productReference = FC4CAB238A742E07B1CDB2FB73905946 /* libGoogleToolboxForMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		DFE50790B8C6B678520DE33EE551D904 /* Pods-Solve My Sudoku */ = {
@@ -410,7 +475,7 @@
 			);
 			name = "Pods-Solve My Sudoku";
 			productName = "Pods-Solve My Sudoku";
-			productReference = 41D4C09B305242A72D3D924772E7AFC2 /* libPods-Solve My Sudoku.a */;
+			productReference = B6A977B029B68326E25643C0EC7DA5DB /* libPods-Solve My Sudoku.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -430,18 +495,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 43B8E88839C8AD6DCE9CDEE84ADF5EAE /* Products */;
+			productRefGroup = C81A58301E8B9FDB18943F84B16AFD47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B47E3B3F829348F63D242EBC298CA5E8 /* GoogleToolboxForMac */,
 				382E2C07D8E452314F90C77F40311E19 /* nanopb */,
 				DFE50790B8C6B678520DE33EE551D904 /* Pods-Solve My Sudoku */,
+				16B759A17FCDDB9B9D0DCE63ED438FBA /* Pods-Solve My SudokuTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E646AB69F025048036E092172EE0AF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB438ECF2153D6AD66C7B3875C385013 /* Pods-Solve My SudokuTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		229ED0C2E0841FF46D056147D5E33600 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +547,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4A7C40A4C742317C20C3D73FB96C9763 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = 382E2C07D8E452314F90C77F40311E19 /* nanopb */;
+			targetProxy = 9A43890856A302E2FB383C7A8BE2424A /* PBXContainerItemProxy */;
+		};
 		8B76BE24F0A30D1EF7CFDBFA7982E2B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
@@ -484,6 +564,12 @@
 			name = GoogleToolboxForMac;
 			target = B47E3B3F829348F63D242EBC298CA5E8 /* GoogleToolboxForMac */;
 			targetProxy = 820316BFAD31B861DAFED41F7D18744D /* PBXContainerItemProxy */;
+		};
+		CBEA01682DF0E6ABEB995C36E90A4391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = B47E3B3F829348F63D242EBC298CA5E8 /* GoogleToolboxForMac */;
+			targetProxy = CDB028DCD57444E9EB80053F83331226 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -515,7 +601,7 @@
 		};
 		21F5D15EC25EA0B5869FCFD69E39F649 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D24BC2E9D50CDCFF22A6A78A41D724DF /* Pods-Solve My Sudoku.release.xcconfig */;
+			baseConfigurationReference = 50A9B41DA1C8B62FFA73F3B240B85949 /* Pods-Solve My Sudoku.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -623,6 +709,29 @@
 			};
 			name = Debug;
 		};
+		564F5D3B6A89A06345DD2812E95DFDAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223E387468670E060B49D61BB6FEDD7C /* Pods-Solve My SudokuTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -683,7 +792,29 @@
 		};
 		7416EF668C4E38C8E2E97476E9067E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C4830DE70950AAD7C08CBCF30D2489C /* Pods-Solve My Sudoku.debug.xcconfig */;
+			baseConfigurationReference = 13ABE51AA0599E916EA132E658F7D74E /* Pods-Solve My Sudoku.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED3159E0C196A56675866EEE593F4A42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3DFCE99DBFA7F63C8B38FB7F69D5F8 /* Pods-Solve My SudokuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -771,6 +902,15 @@
 			buildConfigurations = (
 				7416EF668C4E38C8E2E97476E9067E1B /* Debug */,
 				21F5D15EC25EA0B5869FCFD69E39F649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82BF21D8BEEAA1663D08FCC6217C5990 /* Build configuration list for PBXNativeTarget "Pods-Solve My SudokuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3159E0C196A56675866EEE593F4A42 /* Debug */,
+				564F5D3B6A89A06345DD2812E95DFDAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

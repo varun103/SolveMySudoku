@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My SudokuTests/SolverTests.swift"
-            timestampString = "550561488.9046561"
+            timestampString = "551264661.583469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My SudokuTests/SolverTests.swift"
-            timestampString = "550561488.905014"
+            timestampString = "551264661.583576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
@@ -316,7 +316,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.3184789"
+            timestampString = "551487708.9541759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
@@ -332,12 +332,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318562"
+            timestampString = "551487708.954231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "puzzleSize"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "timePenalty"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -412,13 +412,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318645"
+            timestampString = "551487708.954314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "104"
+            endingLineNumber = "104">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -428,13 +426,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318683"
+            timestampString = "551487708.954352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "Settings"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -444,12 +442,26 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318719"
+            timestampString = "551487708.954386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "init()"
+            startingLineNumber = "102"
+            endingLineNumber = "102">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
+            timestampString = "551487708.954421"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
+            landmarkName = "checkForCorrectAnswers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -460,11 +472,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.318755"
+            timestampString = "551487708.954455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
@@ -476,23 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.318797"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
-            landmarkName = "PuzzleViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.31884"
+            timestampString = "551487708.954488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -508,11 +504,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318882"
+            timestampString = "551487708.95452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "puzzleSize"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Solve My Sudoku/Settings.swift"
+            timestampString = "551487708.954553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "puzzleSize"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Solve My Sudoku/Settings.swift"
+            timestampString = "551487708.954584"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "bestTime"
             landmarkType = "24">
          </BreakpointContent>
@@ -524,13 +552,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.3189141"
+            timestampString = "551487708.954616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "bestTime"
-            landmarkType = "24">
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "Settings"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -540,45 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318947"
+            timestampString = "551487708.954648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "bestTime"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.318979"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "bestTime"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.31901"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "107"
+            endingLineNumber = "107">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -588,7 +582,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319043"
+            timestampString = "551487708.95468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -604,7 +598,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319085"
+            timestampString = "551487708.954712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
@@ -620,13 +614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.319122"
+            timestampString = "551487708.954743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "106"
+            endingLineNumber = "106">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -636,13 +628,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/Settings.swift"
-            timestampString = "551091492.319154"
+            timestampString = "551487708.954774"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "103"
+            endingLineNumber = "103">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -652,7 +642,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319187"
+            timestampString = "551487708.954806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
@@ -668,7 +658,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/SuperViewController.swift"
-            timestampString = "551091492.31923"
+            timestampString = "551091869.109365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -700,77 +690,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319528"
+            timestampString = "551487708.954861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
             endingLineNumber = "221"
-            landmarkName = "puzzleSolvedAnimation(index:completion:)"
+            landmarkName = "clue()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319595"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "check(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Solve My Sudoku/views/PuzzleViewController.swift"
-            timestampString = "551091492.319639"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "check(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Solve_My_Sudoku.PuzzleViewController.check(Any) -&gt; ()"
-                  moduleName = "Solve My Sudoku"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/Solve%20My%20Sudoku/Solve%20My%20Sudoku/views/PuzzleViewController.swift"
-                  timestampString = "550966189.855705"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "1678">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Solve_My_Sudoku.PuzzleViewController.check(Any) -&gt; ()"
-                  moduleName = "Solve My Sudoku"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/Solve%20My%20Sudoku/Solve%20My%20Sudoku/views/PuzzleViewController.swift"
-                  timestampString = "550966189.857928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "261"
-                  endingLineNumber = "261"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
