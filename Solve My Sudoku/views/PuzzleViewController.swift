@@ -13,16 +13,22 @@ import Firebase
 class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var stack: UIStackView!
+    
+    //Buttons
     @IBOutlet weak var clueButton: UIButton!
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    
     @IBOutlet weak var adBanner: GADBannerView!
     @IBOutlet weak var navigationItemx: UINavigationItem!
+
+    //Labels
     @IBOutlet weak var bestTimeLabel: UILabel!
     @IBOutlet weak var notificationLabel: UILabel!
-    
     @IBOutlet weak var timerLabel: UILabel!
+
+    //Cells
     @IBOutlet weak var a0: SudoKoCellView!
     @IBOutlet weak var a1: SudoKoCellView!
     @IBOutlet weak var a2: SudoKoCellView!
@@ -116,9 +122,14 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     let shapeLayer = CAShapeLayer()
     var puzzle: Puzzle!
     var timer: Timer!
-    var timeElapsed:Int = 0
-    var puzzleSolved: Bool!
+    var gameEventsDelegate:GameEventsDelegate = GameEvents()
     
+    // Metrics
+    var timeElapsed:Int = 0
+    var clueCount:Int = 0
+    var countChecks:Int = 0
+    var puzzleSolved: Bool!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stack.layer.addSublayer(shapeLayer)
@@ -135,6 +146,9 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
                             [i0,i1,i2,i3,i4,i5,i6,i7,i8]]
         
         self.timeElapsed = 0
+        self.clueCount = 0
+        self.countChecks = 0
+        
         self.puzzleSolved = false
         self.timerLabel.text = Utils.dateString(forInterval: self.timeElapsed)
         self.bestTimeLabel.text = "Best: " + Utils.dateString(forInterval: Settings.getInstance().bestTime)
@@ -153,8 +167,31 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         NotificationCenter.default.addObserver(self, selector:#selector(self.checkIfPuzzleSolved) , name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
-    // clear out everything except the puzzle
+    
     @IBAction func clear(_ sender: Any) {
+        clearPuzzle()
+    }
+    
+    @IBAction func newGame(_ sender: Any) {
+        startNewGame()
+    }
+    
+    @IBAction func getClue(_ sender: Any) {
+        clue()
+    }
+    
+    @IBAction func check(_ sender: Any) {
+        return check()
+    }
+    
+    @objc func checkIfPuzzleSolved(){
+        if self.puzzle.getEmptyCells().count == 0 {
+            self.check(self)
+        }
+    }
+    
+    // clear out everything except the puzzle
+    fileprivate func clearPuzzle() {
         if (self.puzzleSolved) {
             return
         }
@@ -165,8 +202,7 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
             }
         }
     }
-    
-    @IBAction func newGame(_ sender: Any) {
+    fileprivate func startNewGame() {
         Analytics.logEvent(Events.NEW_PUZZLE, parameters: nil)
         self.sudokuBoard.joined().forEach { cell in
             cell.reset()
@@ -175,11 +211,15 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         self.viewDidLoad()
     }
     
-    @IBAction func getClue(_ sender: Any) {
-        Analytics.logEvent(Events.PUZZLE_CLUE, parameters: nil)
+    fileprivate func clue() {
         if self.puzzleSolved {
             return
         }
+        // log event
+        Analytics.logEvent(Events.PUZZLE_CLUE, parameters: nil)
+        
+        // Add clue count
+        self.clueCount += 1
         let cells = puzzle.getEmptyCells()
         if cells.count > 0 {
             let randomIndex = arc4random_uniform(UInt32((cells.count)))
@@ -190,12 +230,7 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         showInterstitialAd()
         checkIfPuzzleSolved()
     }
-    
-    @objc func checkIfPuzzleSolved(){
-        if self.puzzle.getEmptyCells().count == 0 {
-            self.check(self)
-        }
-    }
+
     
     /// animation method done when the puzzle is solved
     ///
@@ -262,13 +297,15 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         }
     }
     
-    @IBAction func check(_ sender: Any) {
+    fileprivate func check() {
+       
         Analytics.logEvent(Events.CHECK_PUZZLE, parameters: nil)
         let emptyCells = self.puzzle.getEmptyCells()
         
         let incorrectAnswers:[(Int,Int)] = self.checkForIncorrectAnswers()
         
         if incorrectAnswers.count > 0 {
+            countChecks += 1
             showInterstitialAd()
             self.addTimePenalty()
             for inc in incorrectAnswers {
@@ -304,6 +341,8 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
             })
             return
         } else {
+            countChecks += 1
+
             let correctAnswers = self.checkForCorrectAnswers()
             // this would mean that the user has not entered any input
             if correctAnswers.count == 0 {
@@ -475,6 +514,7 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     private func postPuzzleSolved() {
         self.clearButton.isEnabled = false
         Analytics.logEvent(Events.PUZZLE_SOLVED, parameters: ["type" : Settings.getInstance().level])
+        //gameEventsDelegate.puzzleSolved(cluesTaken: <#T##Int#>, timeTaken: <#T##Int#>, timesChecked: <#T##Int#>)
     }
     
     private func disableInput() {

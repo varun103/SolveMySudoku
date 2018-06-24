@@ -64,12 +64,12 @@ class Solver {
     
     private func createPuzzleInput() -> [[Int]] {
         var board:[[Int]] = [[Int]] (repeating: [Int](repeating: 0, count: 9), count: 9)
-        board[0][0] = Int(arc4random_uniform(7)+1)
-        board[1][4] = Int(arc4random_uniform(7)+1)
-        board[3][1] = Int(arc4random_uniform(7)+1)
-        board[5][6] = Int(arc4random_uniform(7)+1)
-        board[6][2] = Int(arc4random_uniform(7)+1)
-        board[8][8] = Int(arc4random_uniform(7)+1)
+        board[0][0] = Int(arc4random_uniform(8)+1)
+        board[Int(arc4random_uniform(2)+1)][4] = Int(arc4random_uniform(8)+1)
+        board[3][1] = Int(arc4random_uniform(8)+1)
+        board[5][6] = Int(arc4random_uniform(8)+1)
+        board[6][2] = Int(arc4random_uniform(8)+1)
+        board[Int(arc4random_uniform(2)+7)][8] = Int(arc4random_uniform(8)+1)
         return board
     }
     

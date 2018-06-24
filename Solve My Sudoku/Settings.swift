@@ -58,13 +58,6 @@ enum DifficultyLevel: String {
     }
 }
 
-struct UserDefaultKeys {
-    static let level = "difficultyLevel"
-    static let bestTimeEasy = "timeEasy"
-    static let bestTimeMedium = "timeMedium"
-    static let bestTimeHard = "timeHard"
-    static let puzzlesPlayed = "count"
-}
 
 /// Singleton class - only one instance per application
 class Settings {

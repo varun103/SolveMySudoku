@@ -19,10 +19,69 @@ protocol Achievement {
     /// has the user already earned this achievement
     var earned: Bool{set get}
     
+    /// The key name used to store the achievements
+    var userDefaultKey: String {get}
 }
 
+class CountBasedAchievement: Achievement, Equatable {
+    
+    let stars: Int
+    
+    let description: String
+    
+    var earned: Bool = false
+    
+    let limit: Int
+    
+    private(set) var currentCount: Int = 0
+    
+    let userDefaultKey: String
+    
+    init(stars:Int, description: String, initialCount: Int, limit: Int, userDefaultKey: String) {
+        self.stars = stars
+        self.limit = limit
+        self.description = description
+        self.userDefaultKey = userDefaultKey
+        self.currentCount = UserDefaults().integer(forKey: self.userDefaultKey)
+        if (self.currentCount >= self.limit) {
+            self.earned = true
+        }
+    }
+    
+    /// Increment the count (User's progression towards the achievement)
+    ///
+    /// - Parameter count: Integer
+    func addCount(count:Int = 1) {
+        if earned {
+            return
+        }
+        currentCount += 1
+        UserDefaults().set(currentCount, forKey: self.userDefaultKey)
+        if currentCount >= limit {
+            self.earned = true
+        }
+    }
+    
+    static func == (lhs: CountBasedAchievement, rhs: CountBasedAchievement) -> Bool {
+        if (lhs.stars == rhs.stars) && ((lhs.limit - lhs.currentCount) == (rhs.limit - rhs.currentCount)) {
+            return true
+        }
+        return false
+    }
+    
+    static func < (lhs: CountBasedAchievement, rhs: CountBasedAchievement) -> Bool {
+        if (lhs.stars < rhs.stars) {
+            return true
+        } else if (lhs.stars == rhs.stars) {
+            if lhs.limit - lhs.currentCount <= rhs.limit - rhs.currentCount {
+                return true
+            }
+        }
+        return false
+    }
+}
 
-class CountBasedAchievement: Achievement {
+class TimeBasedAchievement: Achievement {
     
     var stars: Int
     
@@ -30,9 +89,33 @@ class CountBasedAchievement: Achievement {
     
     var earned: Bool
     
-    init(stars:Int, description: String, initialCount: Int) {
+    var userDefaultKey: String
+
+    init(stars:Int, description: String, initalTimeInSeconds: Int, userDefaultKey: String) {
         self.stars = stars
         self.description = description
         self.earned = false
+        self.userDefaultKey = userDefaultKey
+    }
+}
+
+extension Achievement {
+    static func == (lhs: Achievement, rhs: Achievement) -> Bool {
+        if (lhs.stars == rhs.stars) {
+            return true
+        }
+        return false
+    }
+    
+    static func < (lhs: Achievement, rhs: Achievement) -> Bool {
+        if !lhs.earned && rhs.earned {
+            return true
+        }
+        if (!lhs.earned && !rhs.earned) || (lhs.earned && rhs.earned) {
+            if (lhs.stars <= rhs.stars) {
+                return true
+            }
+            }
+        return false
     }
 }
