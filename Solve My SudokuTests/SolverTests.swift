@@ -141,13 +141,8 @@ class SolverTest: XCTestCase {
     func testCreate() {
         let s = Solver()
         for i in 0...1000 {
-            var temp:[Int]=[]
-            let x = s.createPuzzle()
+            s.createPuzzle()
             print(i)
-
-            if i == 0 {
-                temp = x[1]
-            }
         }
     }
 }

@@ -39,6 +39,8 @@
 		55E1DE2A20DB9E8B00C6DC55 /* GameEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1DE2920DB9E8B00C6DC55 /* GameEvents.swift */; };
 		55E1DE2C20DCD0C300C6DC55 /* AchievementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1DE2B20DCD0C300C6DC55 /* AchievementTests.swift */; };
 		55F3FD4020DED87E00DA598B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F3FD3F20DED87E00DA598B /* UserDefaultKeys.swift */; };
+		55F3FD4220DF39EB00DA598B /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F3FD4120DF39EB00DA598B /* CustomTableCell.swift */; };
+		55F3FD4420DF3EF500DA598B /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F3FD4320DF3EF500DA598B /* AchievementViewController.swift */; };
 		55F508BD20D8DBA20006A7A3 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F508BC20D8DBA20006A7A3 /* Metrics.swift */; };
 		5A533FC4652B33E856A32EE9 /* libPods-Solve My SudokuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32520DE085FE9C865673A397 /* libPods-Solve My SudokuTests.a */; };
 		6E079258E93B93FF43B1A1E4 /* libPods-Solve My Sudoku.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */; };
@@ -101,6 +103,8 @@
 		55E1DE2920DB9E8B00C6DC55 /* GameEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEvents.swift; sourceTree = "<group>"; };
 		55E1DE2B20DCD0C300C6DC55 /* AchievementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTests.swift; sourceTree = "<group>"; };
 		55F3FD3F20DED87E00DA598B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		55F3FD4120DF39EB00DA598B /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		55F3FD4320DF3EF500DA598B /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
 		55F508BC20D8DBA20006A7A3 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		71476AB458C5A06155532896 /* libPods-Solve My Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Solve My Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB32AD45917940277F94DAB /* Pods-Solve My Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Solve My Sudoku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Solve My Sudoku/Pods-Solve My Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				5570766B20C32B63003F67AF /* CustomSegmentControl.swift */,
 				5570766D20C68AA7003F67AF /* CustomTabViewController.swift */,
 				5573305320CFBCFC00132F51 /* HelpViewController.swift */,
+				55F3FD4120DF39EB00DA598B /* CustomTableCell.swift */,
+				55F3FD4320DF3EF500DA598B /* AchievementViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				558626AF20CA125B006D7C45 /* Utils.swift in Sources */,
 				55E1DE2620D8ED3E00C6DC55 /* Events.swift in Sources */,
 				5570766E20C68AA7003F67AF /* CustomTabViewController.swift in Sources */,
+				55F3FD4220DF39EB00DA598B /* CustomTableCell.swift in Sources */,
 				5570766C20C32B63003F67AF /* CustomSegmentControl.swift in Sources */,
 				55A360A420966E3F00EA543A /* SudokuRowStackView.swift in Sources */,
 				55E1DE2820DB4C3B00C6DC55 /* UserAchievements.swift in Sources */,
@@ -444,6 +451,7 @@
 				5570766320C11FD1003F67AF /* SettingsViewController.swift in Sources */,
 				559C431F209AFE2600D637F3 /* SolverService.swift in Sources */,
 				5540E10420B6AA740059CEED /* Configuration.swift in Sources */,
+				55F3FD4420DF3EF500DA598B /* AchievementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

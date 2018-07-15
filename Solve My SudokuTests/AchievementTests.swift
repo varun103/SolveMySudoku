@@ -74,4 +74,24 @@ class AchievementTests: XCTestCase {
         
         UserDefaults().removeObject(forKey: UserDefaultKeys.easyFive)
     }
+    
+    func testSortAchievements() {
+//        var achievements: [Achievement]
+//        
+//        let achievement1 = UserAchievements.getInstance().EASY_FIVE
+//        let achievement2 = UserAchievements.getInstance().EASY_FIFTEEN
+//        let achievement3 = UserAchievements.getInstance().MEDIUM_THREE
+//        
+//        achievements.append(achievement3)
+//        achievements.append(achievement2)
+//        achievements.append(achievement1)
+//        
+        
+        //XCTAssertEqual(achievement2, achievements[1])
+        
+        //achievements.sort(by: > )
+
+    }
+    
+    
 }

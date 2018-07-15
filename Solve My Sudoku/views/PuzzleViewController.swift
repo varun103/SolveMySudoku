@@ -399,6 +399,17 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
         popUpVc.didMove(toParentViewController: self)
     }
     
+    @IBOutlet weak var achievements: UIButton!
+    
+    @IBAction func achievements(_ sender: Any) {
+        Analytics.logEvent(Events.ACHIEVEMENTS, parameters: nil)
+        let popUpVc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "achievements") as! AchievementViewController
+        self.addChildViewController(popUpVc)
+        popUpVc.view.frame = self.view.frame
+        self.view.addSubview(popUpVc.view)
+        popUpVc.didMove(toParentViewController: self)
+    }
+    
     @objc func start() {
         if !self.puzzleSolved {
             self.timeElapsed = self.timeElapsed + 1
@@ -514,7 +525,7 @@ class PuzzleViewController: SuperViewController, GADBannerViewDelegate {
     private func postPuzzleSolved() {
         self.clearButton.isEnabled = false
         Analytics.logEvent(Events.PUZZLE_SOLVED, parameters: ["type" : Settings.getInstance().level])
-        //gameEventsDelegate.puzzleSolved(cluesTaken: <#T##Int#>, timeTaken: <#T##Int#>, timesChecked: <#T##Int#>)
+        gameEventsDelegate.puzzleSolved(cluesTaken: self.clueCount, timeTaken: self.timeElapsed, timesChecked: self.countChecks)
     }
     
     private func disableInput() {

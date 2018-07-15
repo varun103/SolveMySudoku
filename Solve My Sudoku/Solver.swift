@@ -67,8 +67,8 @@ class Solver {
         board[0][0] = Int(arc4random_uniform(8)+1)
         board[Int(arc4random_uniform(2)+1)][4] = Int(arc4random_uniform(8)+1)
         board[3][1] = Int(arc4random_uniform(8)+1)
-        board[5][6] = Int(arc4random_uniform(8)+1)
-        board[6][2] = Int(arc4random_uniform(8)+1)
+        board[5][Int(arc4random_uniform(3)+5)] = Int(arc4random_uniform(8)+1)
+        board[6][Int(arc4random_uniform(2)+2)] = Int(arc4random_uniform(8)+1)
         board[Int(arc4random_uniform(2)+7)][8] = Int(arc4random_uniform(8)+1)
         return board
     }

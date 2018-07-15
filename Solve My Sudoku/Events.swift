@@ -14,4 +14,5 @@ struct Events {
     static let PUZZLE_CLUE = "puzzle_clue"
     static let NEW_PUZZLE = "new_puzzle"
     static let PUZZLE_SETTINGS = "puzzle_settings"
+    static let ACHIEVEMENTS = "view_achievements"
 }

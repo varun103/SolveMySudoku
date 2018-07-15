@@ -252,8 +252,6 @@ class ViewController: SuperViewController, GADBannerViewDelegate {
         adsBannerView.rootViewController = self
         adsBannerView.load(request)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(disableUserInput))
-        
-        
     }
     
     @objc private func disableUserInput() {
@@ -305,7 +303,6 @@ class ViewController: SuperViewController, GADBannerViewDelegate {
             cell.adjustFont()
         }
     }
-    
 }
 
 

@@ -17,25 +17,37 @@ protocol Achievement {
     var description: String {get}
     
     /// has the user already earned this achievement
-    var earned: Bool{set get}
+    var earned: Bool{set get} 
     
     /// The key name used to store the achievements
     var userDefaultKey: String {get}
+    
+    /// The current level of the achievement
+    var currentLevel: String {get}
 }
 
-class CountBasedAchievement: Achievement, Equatable {
+class CountBasedAchievement: Achievement,Equatable {
     
     let stars: Int
     
     let description: String
     
-    var earned: Bool = false
+    var earned: Bool = false 
     
     let limit: Int
     
     private(set) var currentCount: Int = 0
     
     let userDefaultKey: String
+    
+    var currentLevel: String {
+        get {
+            if self.earned {
+                return ""
+            }
+            return "\(self.currentCount) of \(self.limit)"
+        }
+    }
     
     init(stars:Int, description: String, initialCount: Int, limit: Int, userDefaultKey: String) {
         self.stars = stars
@@ -68,7 +80,7 @@ class CountBasedAchievement: Achievement, Equatable {
         }
         return false
     }
-    
+
     static func < (lhs: CountBasedAchievement, rhs: CountBasedAchievement) -> Bool {
         if (lhs.stars < rhs.stars) {
             return true
@@ -81,25 +93,69 @@ class CountBasedAchievement: Achievement, Equatable {
     }
 }
 
-class TimeBasedAchievement: Achievement {
+/// Lack of a better word for it
+/// this is mainly to track achievements that do not need to maintain state.
+/// Just compares the values to the limit
+class OneTimeAchievement: Achievement {
     
-    var stars: Int
+    let stars: Int
     
-    var description: String
+    let description: String
     
-    var earned: Bool
+    var earned: Bool = false 
     
-    var userDefaultKey: String
+    let userDefaultKey: String
+    
+    var currentValue: Int
+    
+    let limit:Int
+    
+    var currentLevel: String {
+        get {
+            if self.earned {
+                return ""
+            }
+            return "Best: \(self.currentValue)" 
+        }
+    }
 
-    init(stars:Int, description: String, initalTimeInSeconds: Int, userDefaultKey: String) {
+    init(stars:Int, description: String, limit: Int, userDefaultKey: String) {
+        
         self.stars = stars
         self.description = description
-        self.earned = false
         self.userDefaultKey = userDefaultKey
+        self.currentValue = UserDefaults().integer(forKey: self.userDefaultKey)
+        self.limit = limit
+        self.check(newValue: self.currentValue)
+    }
+    
+    func check(newValue: Int){
+        if earned {
+            return
+        }
+        if (newValue <= self.currentValue) {
+            self.currentValue = newValue
+            UserDefaults().set(self.currentValue, forKey: self.userDefaultKey)
+        }
+        if (newValue < self.limit && (newValue  != 0)) {
+            self.earned = true
+        }
+    }
+}
+
+
+class TimeBasedAchievement: OneTimeAchievement {
+    
+    override var currentLevel: String {
+        if self.earned {
+            return ""
+        }
+        return "Best: " + Utils.dateString(forInterval: self.currentValue)
     }
 }
 
 extension Achievement {
+    
     static func == (lhs: Achievement, rhs: Achievement) -> Bool {
         if (lhs.stars == rhs.stars) {
             return true
