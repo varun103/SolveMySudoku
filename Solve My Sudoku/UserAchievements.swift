@@ -68,13 +68,13 @@ class UserAchievements {
     
     var EASY_TIME_SEVEN = TimeBasedAchievement(stars:1, description: AchievementDescription.easyTime , limit: 420, userDefaultKey:UserDefaultKeys.bestTimeEasy)
     var MEDIUM_TIME_TEN = TimeBasedAchievement(stars:1, description:AchievementDescription.mediumTime, limit: 600, userDefaultKey:UserDefaultKeys.bestTimeMedium)
-    var HARD_TIME_FIFTEEN = TimeBasedAchievement(stars:1, description:AchievementDescription.hardTime, limit: 900, userDefaultKey:UserDefaultKeys.bestTimeHard)
+    var HARD_TIME_FIFTEEN = TimeBasedAchievement(stars:2, description:AchievementDescription.hardTime, limit: 900, userDefaultKey:UserDefaultKeys.bestTimeHard)
     
     var EASY_TIME_FIVE = TimeBasedAchievement(stars:2, description: AchievementDescription.easyTimeTwo , limit: 300, userDefaultKey:UserDefaultKeys.bestTimeEasy)
     var MEDIUM_TIME_SEVEN = TimeBasedAchievement(stars:2, description:AchievementDescription.mediumTimeTwo, limit: 420, userDefaultKey:UserDefaultKeys.bestTimeMedium)
     
     
-    var HARD_TIME_TEN = TimeBasedAchievement(stars:3, description:AchievementDescription.hardTimeTwo, limit: 600, userDefaultKey:UserDefaultKeys.bestTimeHard)
+    var HARD_TIME_TEN = TimeBasedAchievement(stars:5, description:AchievementDescription.hardTimeTwo, limit: 600, userDefaultKey:UserDefaultKeys.bestTimeHard)
     
     static func getInstance() -> UserAchievements{
         return instance
