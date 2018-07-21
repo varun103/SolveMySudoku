@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol Achievement {
     
@@ -71,6 +72,7 @@ class CountBasedAchievement: Achievement,Equatable {
         UserDefaults().set(currentCount, forKey: self.userDefaultKey)
         if currentCount >= limit {
             self.earned = true
+            Analytics.logEvent(Events.ACHIEVEMENT_UNLOCKED, parameters: ["description":self.description])
         }
     }
     
@@ -139,6 +141,7 @@ class OneTimeAchievement: Achievement {
         }
         if (newValue < self.limit && (newValue  != 0)) {
             self.earned = true
+            Analytics.logEvent(Events.ACHIEVEMENT_UNLOCKED, parameters: ["description":self.description])
         }
     }
 }
